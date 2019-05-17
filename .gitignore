@@ -59,3 +59,12 @@ typings/
 
 # next.js build output
 .next
+
+# hidden
+.DS_Store
+.vscode
+yarn.lock
+scripts
+src
+package.json
+thirdParty
