@@ -69,3 +69,7 @@ src
 package.json
 thirdParty
 docs/vendor
+/temp.js
+/db
+/images
+.eslintrc.js
