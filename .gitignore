@@ -73,4 +73,5 @@ docs/vendor
 /db
 /images
 .eslintrc.js
-docs1
+.eslintignore
+/docs1
