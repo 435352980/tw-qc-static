@@ -55,7 +55,7 @@ typings/
 .yarn-integrity
 
 # dotenv environment variables file
-.env
+
 
 # next.js build output
 .next
@@ -65,13 +65,5 @@ typings/
 .vscode
 yarn.lock
 static
-webpack
-src
-package.json
 docs/vendor
-tsconfig.json
-.env
-.eslintrc.js
-.eslintignore
-.prettierrc.js
-.editorconfig
+
