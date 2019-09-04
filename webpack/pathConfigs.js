@@ -10,7 +10,7 @@ const BUILD_DIR = path.join(ROOT_DIR, 'docs');
 const NODE_MODULES_DIR = path.join(ROOT_DIR, 'node_modules');
 
 //静态资源目录
-const STATIC_DIR = path.join(ROOT_DIR, 'static');
+const STATIC_DIR = path.join(ROOT_DIR, 'resources');
 
 //源码目录
 const SOURCE_DIR = path.join(ROOT_DIR, '/src');

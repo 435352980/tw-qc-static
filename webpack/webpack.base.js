@@ -75,7 +75,7 @@ module.exports = {
       APP_VERSION: JSON.stringify(APP_VERSION),
     }),
     // 复制静态文件
-    // new CopyWebpackPlugin([{ from: STATIC_DIR, to: path.join(BUILD_DIR, 'resources') }]),
+    new CopyWebpackPlugin([{ from: STATIC_DIR, to: path.join(BUILD_DIR, 'resources') }]),
     new HtmlWebpackPlugin({
       inject: 'body',
       // favicon: path.join(ROOT_DIR, 'app.ico'),
