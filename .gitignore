@@ -64,6 +64,6 @@ typings/
 .DS_Store
 .vscode
 yarn.lock
-static
+resources
 docs/vendor
 
