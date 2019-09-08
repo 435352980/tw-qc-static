@@ -16,7 +16,7 @@
     "easy-peasy": "^3.0.1",
     "html2canvas": "^1.0.0-rc.3",
     "lodash": "^4.17.15",
-    "mdx-m3-viewer": "^4.5.12",
+    "mdx-m3-viewer": "^4.6.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-qr-reader": "^2.2.1",

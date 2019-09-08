@@ -85,7 +85,7 @@ const MdxViewer = () => {
         model.sequences.findIndex(seq => seq.name.toLowerCase().includes('stand')),
       );
       instance.setSequenceLoopMode(2);
-      instance.uniformScale(0.5);
+      // instance.uniformScale(0.5);
       setViewer(viewer);
       setInstance(instance);
       setAnimations(model.sequences.map(seq => seq.name));
