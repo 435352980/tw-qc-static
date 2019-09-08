@@ -72,6 +72,7 @@ const MdxViewer = () => {
       return;
     }
     let viewer = new ModelViewer.viewer.ModelViewer(viewerRef.current);
+    viewer.gl.clearColor(0.244, 0.246, 0.249, 1);
     let scene = viewer.addScene();
     // Check camera.js!
     setupCamera(scene);
