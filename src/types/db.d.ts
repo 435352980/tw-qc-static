@@ -1640,6 +1640,24 @@ interface Skill {
   pets?: string[];
 }
 
+/**
+ * 皮肤信息
+ */
+interface SkinInfo {
+  /**
+   * 皮肤礼盒ID
+   */
+  id: string;
+  /**
+   * 皮肤礼盒名称
+   */
+  name: string;
+  /**
+   * 皮肤模型名称
+   */
+  model: string;
+}
+
 interface Hero {
   /**
    * 英雄ID
@@ -1677,4 +1695,22 @@ interface Hero {
    * 类别英雄/召唤物
    */
   type: 'hero' | 'pet';
+  skins?: {
+    /**
+     * 愚人节活动皮肤集合
+     */
+    april: SkinInfo[];
+    /**
+     * 夏日活动皮肤集合
+     */
+    summer: SkinInfo[];
+    /**
+     * 万圣节活动皮肤集合
+     */
+    halloween: SkinInfo[];
+    /**
+     * 新年活动皮肤集合
+     */
+    newYear: SkinInfo[];
+  };
 }

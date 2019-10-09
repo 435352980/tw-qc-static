@@ -11,7 +11,7 @@ class DBHelper<T extends { [propName: string]: any }> {
   }
 
   public find(filterFn: (item: T) => boolean): T;
-  public find(name: keyof T, value: string): T;
+  public find<K extends keyof T>(name: K, value: T[K]): T;
   /**
    * 根据条件查找相应对象
    * @param filterFnOrKey
@@ -25,7 +25,7 @@ class DBHelper<T extends { [propName: string]: any }> {
   }
 
   public findIndex(filterFn: (item: T) => boolean): number;
-  public findIndex(name: keyof T, value: string): number;
+  public findIndex<K extends keyof T>(name: K, value: T[K]): number;
   /**
    * 根据条件查找相应对象位置
    * @param filterFnOrKey
@@ -39,7 +39,7 @@ class DBHelper<T extends { [propName: string]: any }> {
   }
 
   public filter(filterFn: (item: T) => boolean): T[];
-  public filter(name: keyof T, value: string): T[];
+  public filter<K extends keyof T>(name: K, value: T[K]): T[];
   /**
    * 根据条件过滤相应对象
    * @param filterFnOrKey
@@ -68,7 +68,7 @@ export function getDb(dbName: 'goods' | 'heroes' | 'units') {
   return {
     goods: new DBHelper<Good>(goods as Good[]),
     heroes: new DBHelper<Hero>(heroes as Hero[]),
-    units: new DBHelper<Unit>(units as Unit[])
+    units: new DBHelper<Unit>(units as Unit[]),
   }[dbName];
 }
 
@@ -76,4 +76,4 @@ export function getDb(dbName: 'goods' | 'heroes' | 'units') {
  * 获取图片
  * @param imageName 图片名称
  */
-export const getImage = (imageName: string) => (images as { [propName: string]: string })[imageName] || '';
+export const getImage = (imageName: string) => images[imageName] || '';
