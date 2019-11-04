@@ -29,10 +29,21 @@ const Scan: FC<RouteComponentProps> = props => {
             try {
               const insertData = JSON.parse(data) as LocalRecord;
               //比对是否为重复插入
-              if (!recordsDb.find({ file: insertData.file, codes: insertData.codes }).value()) {
+              const findRecord = recordsDb
+                .find({ file: insertData.file, codes: insertData.codes })
+                .value();
+              if (!findRecord) {
                 recordsDb
                   .insert({ ...insertData, time: moment().format('YYYY-MM-DD HH:mm:ss') })
                   .write();
+                setLoading(false);
+                props.history.push('/record');
+              } else {
+                recordsDb.upsert({
+                  ...findRecord,
+                  ...insertData,
+                  time: moment().format('YYYY-MM-DD HH:mm:ss'),
+                });
                 setLoading(false);
                 props.history.push('/record');
               }
