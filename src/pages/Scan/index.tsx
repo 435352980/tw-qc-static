@@ -2,25 +2,45 @@ import React, { useState, FC } from 'react';
 import QrReader from 'react-qr-reader';
 import { RouteComponentProps } from 'react-router';
 import { makeStyles, createStyles } from '@material-ui/styles';
-import { typography } from '@material-ui/system';
-import { Typography, useMediaQuery } from '@material-ui/core';
-import Header from './/Header';
+import { useMediaQuery } from '@material-ui/core';
+import moment from 'moment';
+import Header from './Header';
+import localStore, { LocalRecord } from '@/util/localStore';
 
 const useStyles = makeStyles(() =>
   createStyles({ root: { display: 'flex', flexDirection: 'column' } }),
 );
 
+const recordsDb = localStore.get('records');
+
 const Scan: FC<RouteComponentProps> = props => {
   const classes = useStyles();
   const matches = useMediaQuery('@media (min-width:600px)');
-  const [result, setResult] = useState<string | null>('');
+  const [loading, setLoading] = useState(false);
 
   return (
     <div className={classes.root}>
-      <Header {...props} />
+      <Header title="扫描速查装备二维码" {...props} />
       <QrReader
         onError={err => console.log(err)}
-        onScan={data => data && setResult(data)}
+        onScan={data => {
+          if (data) {
+            setLoading(true);
+            try {
+              const insertData = JSON.parse(data) as LocalRecord;
+              //比对是否为重复插入
+              if (!recordsDb.find({ file: insertData.file, codes: insertData.codes }).value()) {
+                recordsDb
+                  .insert({ ...insertData, time: moment().format('YYYY-MM-DD HH:mm:ss') })
+                  .write();
+                setLoading(false);
+                props.history.push('/record');
+              }
+            } catch (error) {
+              setLoading(false);
+            }
+          }
+        }}
         style={{
           width: '100%',
           height: `calc(100vh - ${matches ? 64 : 56}px)`,

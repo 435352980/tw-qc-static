@@ -6,6 +6,8 @@ import Search from './Search';
 import GoodInfo from './GoodInfo';
 import UnitInfo from './UnitInfo';
 import Split from './Split';
+import Record from './Record';
+import RecordInfo from './RecordInfo';
 
 const PageFrame = () => {
   return (
@@ -16,6 +18,8 @@ const PageFrame = () => {
       <Route path="/ginfo/:name" component={GoodInfo} />
       <Route path="/uinfo/:name" component={UnitInfo} />
       <Route path="/split/:name" component={Split} />
+      <Route path="/record" component={Record} />
+      <Route path="/rinfo/:id" component={RecordInfo} />
       <Route component={Good} />
     </Switch>
   );
