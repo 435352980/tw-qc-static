@@ -37,11 +37,13 @@ const Scan: FC<RouteComponentProps> = props => {
                 setLoading(false);
                 props.history.push('/record');
               } else {
-                recordsDb.upsert({
-                  id: findRecord.id,
-                  ...insertData,
-                  time: moment().format('YYYY-MM-DD HH:mm:ss'),
-                });
+                recordsDb
+                  .upsert({
+                    id: findRecord.id,
+                    ...insertData,
+                    time: moment().format('YYYY-MM-DD HH:mm:ss'),
+                  })
+                  .write();
                 setLoading(false);
                 props.history.push('/record');
               }
