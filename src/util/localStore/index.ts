@@ -92,7 +92,7 @@ interface DataModel {
   unknownRecords: LocalRecord[];
 }
 
-const adapter = new LocalStorage<DataModel>('zbsc002');
+const adapter = new LocalStorage<DataModel>('zbsc003');
 const db = low(adapter);
 db._.mixin(LodashId);
 // db._.id = '_id';

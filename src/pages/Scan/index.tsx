@@ -29,9 +29,7 @@ const Scan: FC<RouteComponentProps> = props => {
             try {
               const insertData = JSON.parse(data) as LocalRecord;
               //比对是否为重复插入
-              const findRecord = recordsDb
-                .find({ file: insertData.file, codes: insertData.codes })
-                .value();
+              const findRecord = recordsDb.find({ file: insertData.file }).value();
               if (!findRecord) {
                 recordsDb
                   .insert({ ...insertData, time: moment().format('YYYY-MM-DD HH:mm:ss') })
