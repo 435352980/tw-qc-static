@@ -38,7 +38,7 @@ const Scan: FC<RouteComponentProps> = props => {
                 props.history.push('/record');
               } else {
                 recordsDb.upsert({
-                  ...findRecord,
+                  id: findRecord.id,
                   ...insertData,
                   time: moment().format('YYYY-MM-DD HH:mm:ss'),
                 });
