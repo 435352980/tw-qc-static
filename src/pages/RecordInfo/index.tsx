@@ -8,7 +8,13 @@ import {
   CardHeader,
   CardContent,
   Button,
+  IconButton,
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogActions,
 } from '@material-ui/core';
+import DeleteIcon from '@material-ui/icons/Delete';
 import Header from './Header';
 import Container from '@/components/Container';
 import Content from '@/components/Content';
@@ -17,9 +23,9 @@ import { getImage, getDb } from '@/db';
 
 const useStyles = makeStyles({
   card: {
-    overflow: 'visible',
+    // overflow: 'visible',
     boxShadow: 'none',
-    width: '100%',
+    // width: '100%',
     background: 'transparent',
   },
 });
@@ -30,6 +36,7 @@ const RecordInfo: FC<RouteComponentProps<{ id: string }>> = props => {
   const id = props.match.params.id;
   const classes = useStyles();
   const [info, setInfo] = useState<LocalRecord>();
+  const [showDeleteDialog, setShowDeleteDialog] = useState(false);
   useEffect(() => {
     setInfo(recordDb.getById(id).value());
   }, [id]);
@@ -48,7 +55,7 @@ const RecordInfo: FC<RouteComponentProps<{ id: string }>> = props => {
   }, []);
   return (
     <Container>
-      <Header {...props} />
+      <Header title="存档明细" {...props} />
       <Content>
         {info && (
           <Card classes={{ root: classes.card }}>
@@ -81,6 +88,11 @@ const RecordInfo: FC<RouteComponentProps<{ id: string }>> = props => {
                 </>
               }
               subheader={info.time}
+              action={
+                <IconButton>
+                  <DeleteIcon onClick={() => setShowDeleteDialog(true)} />
+                </IconButton>
+              }
             />
             <CardContent>
               {info.panel.length > 0 && (
@@ -111,6 +123,33 @@ const RecordInfo: FC<RouteComponentProps<{ id: string }>> = props => {
           </Card>
         )}
       </Content>
+      <Dialog open={showDeleteDialog}>
+        <DialogTitle>删除确认</DialogTitle>
+        <DialogContent>确认删除存档吗？ </DialogContent>
+        <DialogActions>
+          <Button
+            onClick={() => {
+              setShowDeleteDialog(false);
+            }}
+            color="primary"
+            autoFocus
+          >
+            取消
+          </Button>
+          <Button
+            onClick={() => {
+              if (info) {
+                recordDb.removeById(info.id as string).write();
+              }
+              setShowDeleteDialog(false);
+              props.history.push('/record');
+            }}
+            color="primary"
+          >
+            确定
+          </Button>
+        </DialogActions>
+      </Dialog>
     </Container>
   );
 };

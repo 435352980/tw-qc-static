@@ -2,7 +2,7 @@ import React, { useState, FC } from 'react';
 import QrReader from 'react-qr-reader';
 import { RouteComponentProps } from 'react-router';
 import { makeStyles, createStyles } from '@material-ui/styles';
-import { useMediaQuery } from '@material-ui/core';
+import { useMediaQuery, CircularProgress } from '@material-ui/core';
 import moment from 'moment';
 import Header from './Header';
 import localStore, { LocalRecord } from '@/util/localStore';
@@ -20,46 +20,50 @@ const Scan: FC<RouteComponentProps> = props => {
 
   return (
     <div className={classes.root}>
-      <Header title="扫描速查装备二维码" {...props} />
-      <QrReader
-        onError={err => console.log(err)}
-        onScan={data => {
-          if (data) {
-            setLoading(true);
-            try {
-              const insertData = JSON.parse(data) as LocalRecord;
-              //比对是否为重复插入
-              const findRecord = recordsDb.find({ file: insertData.file }).value();
-              if (!findRecord) {
-                recordsDb
-                  .insert({ ...insertData, time: moment().format('YYYY-MM-DD HH:mm:ss') })
-                  .write();
+      <Header title="扫码导入" {...props} />
+      {loading ? (
+        <CircularProgress />
+      ) : (
+        <QrReader
+          onError={err => console.log(err)}
+          onScan={data => {
+            if (data) {
+              setLoading(true);
+              try {
+                const insertData = JSON.parse(data) as LocalRecord;
+                //比对是否为重复插入
+                const findRecord = recordsDb.find({ file: insertData.file }).value();
+                if (!findRecord) {
+                  recordsDb
+                    .insert({ ...insertData, time: moment().format('YYYY-MM-DD HH:mm:ss') })
+                    .write();
+                  setLoading(false);
+                  props.history.push('/record');
+                } else {
+                  recordsDb
+                    .upsert({
+                      id: findRecord.id,
+                      ...insertData,
+                      time: moment().format('YYYY-MM-DD HH:mm:ss'),
+                    })
+                    .write();
+                  setLoading(false);
+                  props.history.push('/record');
+                }
+              } catch (error) {
                 setLoading(false);
-                props.history.push('/record');
-              } else {
-                recordsDb
-                  .upsert({
-                    id: findRecord.id,
-                    ...insertData,
-                    time: moment().format('YYYY-MM-DD HH:mm:ss'),
-                  })
-                  .write();
-                setLoading(false);
-                props.history.push('/record');
               }
-            } catch (error) {
-              setLoading(false);
             }
-          }
-        }}
-        style={{
-          width: '100%',
-          height: `calc(100vh - ${matches ? 64 : 56}px)`,
-          display: 'flex',
-          background: '#000',
-          alignItems: 'center',
-        }}
-      />
+          }}
+          style={{
+            width: '100%',
+            height: `calc(100vh - ${matches ? 64 : 56}px)`,
+            display: 'flex',
+            background: '#000',
+            alignItems: 'center',
+          }}
+        />
+      )}
     </div>
   );
 };

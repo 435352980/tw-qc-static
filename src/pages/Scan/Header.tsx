@@ -4,11 +4,12 @@ import { makeStyles, createStyles } from '@material-ui/styles';
 import { RouteComponentProps } from 'react-router';
 
 import IconButton from '@material-ui/core/IconButton';
-// import MenuIcon from '@material-ui/icons/Menu';
+import HomeIcon from '@material-ui/icons/Home';
 import ArrowBackIcon from '@material-ui/icons/ArrowBackIos';
 // import CropFreeIcon from '@material-ui/icons/CropFree';
 
 import SearchIcon from '@material-ui/icons/Search';
+import SaveIcon from '@material-ui/icons/Save';
 
 interface GoodPageProps extends RouteComponentProps {
   title?: string;
@@ -39,8 +40,14 @@ const Header: FC<GoodPageProps> = ({ title = `${APP_NAME}`, history }) => {
           {title}
         </Typography>
 
+        <IconButton color="inherit" onClick={() => history.push('/')}>
+          <HomeIcon />
+        </IconButton>
         <IconButton color="inherit" onClick={() => history.push('/search')}>
           <SearchIcon />
+        </IconButton>
+        <IconButton color="inherit" onClick={() => history.push('/record')}>
+          <SaveIcon />
         </IconButton>
       </Toolbar>
     </AppBar>

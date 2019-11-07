@@ -9,6 +9,7 @@ import ArrowBackIcon from '@material-ui/icons/ArrowBackIos';
 import CropFreeIcon from '@material-ui/icons/CropFree';
 
 import SearchIcon from '@material-ui/icons/Search';
+import SaveIcon from '@material-ui/icons/Save';
 
 interface GoodPageProps extends RouteComponentProps {
   title?: string;
@@ -44,6 +45,9 @@ const Header: FC<GoodPageProps> = ({ title = `${APP_NAME}`, history }) => {
         </IconButton>
         <IconButton color="inherit" onClick={() => history.push('/search')}>
           <SearchIcon />
+        </IconButton>
+        <IconButton color="inherit" onClick={() => history.push('/record')}>
+          <SaveIcon />
         </IconButton>
         <IconButton color="inherit" onClick={() => history.push('/scan')}>
           <CropFreeIcon />

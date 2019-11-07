@@ -44,7 +44,7 @@ const Good: FC<RouteComponentProps> = props => {
 
   return (
     <Container>
-      <Header onMenuClick={() => setMenuOpen(true)} {...props} />
+      <Header onMenuClick={() => setMenuOpen(true)} title="装备列表" {...props} />
       <Content>
         <GoodList list={list} {...props} />
       </Content>

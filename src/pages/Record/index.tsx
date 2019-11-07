@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import React, { FC, useState, useEffect } from 'react';
 import { RouteComponentProps } from 'react-router';
 import { AutoSizer, List } from 'react-virtualized';
 import { ListItem, Avatar, ListItemText, Typography, makeStyles } from '@material-ui/core';
@@ -16,10 +16,15 @@ const recordDb = localStore.get('records');
 
 const Record: FC<RouteComponentProps> = props => {
   const classes = useStyles();
-  const [list, setList] = useState(recordDb.value());
+  const [list, setList] = useState<LocalRecord[]>([]);
+
+  useEffect(() => {
+    setList(recordDb.value());
+  }, []);
+
   return (
     <Container>
-      <Header {...props} />
+      <Header title="存档列表" {...props} />
       <Content>
         <AutoSizer>
           {({ width, height }) => (
