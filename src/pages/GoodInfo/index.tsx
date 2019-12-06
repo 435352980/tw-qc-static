@@ -10,7 +10,7 @@ const GoodInfo: FC<RouteComponentProps<{ name: string }>> = props => {
   console.log(match.params.name);
   return (
     <Container>
-      <Header title="装备明细" {...props} />
+      <Header title="明细" {...props} />
       <Content>
         <DetailView {...props} />
       </Content>

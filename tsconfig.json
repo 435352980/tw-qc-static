@@ -14,6 +14,7 @@
       "@/*": ["src/*"]
     }
   },
+  "allowSyntheticDefaultImports": true,
   "include": ["src/**/*"],
   "exclude": ["node_modules", "build", "webpack", "scripts"]
 }

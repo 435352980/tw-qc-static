@@ -5,7 +5,7 @@ module.exports = {
     sourceType: 'module',
     ecmaFeatures: { jsx: true },
     //typescript-eslint-plugin
-    project: './tsconfig.json',
+    // project: './tsconfig.json',
   },
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint', 'react', 'import', 'react-hooks', 'prettier'],
