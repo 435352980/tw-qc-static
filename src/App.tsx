@@ -2,26 +2,28 @@ import React from 'react';
 import { render } from 'react-dom';
 import { StoreProvider } from 'easy-peasy';
 import { HashRouter } from 'react-router-dom';
-import { createMuiTheme, CssBaseline } from '@material-ui/core';
-import { ThemeProvider } from '@material-ui/styles';
+import { createMuiTheme, CssBaseline, ThemeProvider } from '@material-ui/core';
 import blue from '@material-ui/core/colors/blue';
 
 import store from '@/store';
-import PageFrame from '@/pages/PageFrame';
-import { fontFamily } from '@/theme';
+import Main from '@/views/Main';
 
-import 'react-virtualized/styles.css';
-import 'react-table/react-table.css';
-
-const theme = createMuiTheme({ typography: { fontFamily }, palette: { primary: blue } });
-
+const theme = createMuiTheme({
+  typography: {
+    button: { textTransform: 'capitalize' },
+    fontFamily: `'Chinese Quote', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'`,
+  },
+  palette: { primary: blue },
+});
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <StoreProvider store={store}>
         <HashRouter>
-          <PageFrame />
+          <Main />
         </HashRouter>
       </StoreProvider>
     </ThemeProvider>

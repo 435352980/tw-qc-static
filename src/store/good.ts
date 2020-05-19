@@ -4,15 +4,15 @@ export interface GoodModel {
   /**
    * 类型过滤
    */
-  filterCat: string;
+  filterCat: FilterCat;
   /**
    * 设置类型过滤
    */
-  setFilterCat: Action<GoodModel, string>;
+  setFilterCat: Action<GoodModel, FilterCat>;
 }
 
 const goodModel: GoodModel = {
-  filterCat: 'weapon',
+  filterCat: 'Weapon',
   setFilterCat: action((state, payload) => {
     state.filterCat = payload;
   }),

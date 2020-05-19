@@ -1,20 +1,16 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
+    "target": "es2018",
+    "module": "ESNext",
     "moduleResolution": "node",
-    "jsx": "react",
-    "esModuleInterop": true,
-    "importHelpers": true,
-    "allowJs": true,
-    "checkJs": true,
-    "strict": true,
     "baseUrl": ".",
+    "jsx": "react",
+    "allowJs": true,
+    "lib": ["es2019", "DOM"],
     "paths": {
       "@/*": ["src/*"]
-    }
+    },
+    "allowSyntheticDefaultImports": true
   },
-  "allowSyntheticDefaultImports": true,
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "build", "webpack", "scripts"]
+  "exclude": ["node_modules", "build", "webpack", "scripts", "docs"]
 }

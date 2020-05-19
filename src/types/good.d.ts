@@ -1,0 +1,16 @@
+type FilterCat =
+  | 'Equip'
+  | 'Weapon'
+  | 'Armor'
+  | 'Helm'
+  | 'Ring'
+  | 'Wings'
+  | 'Material'
+  | 'Token'
+  | 'Icon'
+  | 'Wing Frame'
+  | 'Quest'
+  | 'Summoner'
+  | 'Book'
+  | 'Other'
+  | null;

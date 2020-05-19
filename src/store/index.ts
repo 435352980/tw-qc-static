@@ -3,16 +3,21 @@ import Logger from 'redux-logger';
 
 import search, { SearchModel } from './search';
 import good, { GoodModel } from './good';
+import app, { AppModel } from './app';
 
 interface StoreModel {
   good: GoodModel;
   search: SearchModel;
+  app: AppModel;
 }
 
-const { useStoreActions, useStoreState, useStoreDispatch } = createTypedHooks<StoreModel>();
+const { useStoreActions, useStoreState, useStoreDispatch, useStore } = createTypedHooks<
+  StoreModel
+>();
 
-export { useStoreActions, useStoreState, useStoreDispatch };
+export { useStoreActions, useStoreState, useStoreDispatch, useStore };
 
-const store = createStore<StoreModel>({ search, good }, { middleware: [Logger] });
-
-export default store;
+export default createStore<StoreModel>(
+  { good, search, app },
+  { middleware: process.env.NODE_ENV === 'production' ? [] : [Logger] },
+);

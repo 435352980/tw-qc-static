@@ -2,5 +2,10 @@ module.exports = {
   singleQuote: true,
   trailingComma: 'all',
   printWidth: 100,
-  tabWidth: 2,
+  overrides: [
+    {
+      files: '.prettierrc',
+      options: { parser: 'json' },
+    },
+  ],
 };
