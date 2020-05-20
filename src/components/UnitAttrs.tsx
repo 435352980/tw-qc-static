@@ -25,7 +25,7 @@ const TableCell = styled(MuiTableCell)`
 `;
 
 const UnitAttrs: FC<{ data: W3uUnit }> = ({ data }) => {
-  const local = useStoreState((state) => state.app.local);
+  const local = useStoreState(state => state.app.local);
   return (
     <Paper>
       <TableContainer style={{ minHeight: '100%', minWidth: '100%', overflow: 'hidden' }}>

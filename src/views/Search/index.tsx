@@ -8,16 +8,16 @@ import GoodList from '@/views/GoodList/List';
 import { goodAscSort, goodDescSort } from './util';
 import Header from './Header';
 
-const Search: FC<RouteComponentProps> = (props) => {
-  const dataHelper = useStoreState((state) => state.app.dataHelper);
+const Search: FC<RouteComponentProps> = props => {
+  const dataHelper = useStoreState(state => state.app.dataHelper);
   const { goodDB } = dataHelper;
-  const searchText = useStoreState((state) => state.search.searchText);
+  const searchText = useStoreState(state => state.search.searchText);
   const list = useMemo(
     () =>
       !searchText
         ? []
         : orderBy(
-            goodDB.raw().filter((good) => good.name.includes(searchText)),
+            goodDB.raw().filter(good => good.name.includes(searchText)),
             [
               goodAscSort('goodType'),
               goodDescSort('stage'),

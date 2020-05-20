@@ -20,7 +20,7 @@ interface DetailViewProps {
   show: boolean;
 }
 
-const Detail: React.FC<RouteComponentProps<{ id: string }>> = (props) => {
+const Detail: React.FC<RouteComponentProps<{ id: string }>> = props => {
   const { match } = props;
   const id = match.params.id;
 

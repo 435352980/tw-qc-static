@@ -44,7 +44,7 @@ const BossDropPanel: FC<{
             <TableContainer style={{ minHeight: '100%', minWidth: '100%', overflow: 'hidden' }}>
               <Table size="small">
                 <TableBody>
-                  {drops.map((drop) => {
+                  {drops.map(drop => {
                     const { id, name, imgData, desc, agentDrops } = drop;
                     return (
                       <TableRow key={id} hover>
@@ -72,7 +72,7 @@ const BossDropPanel: FC<{
                               <>
                                 {'　=>　'}
                                 <div style={{ display: 'flex', flexDirection: 'column' }}>
-                                  {agentDrops.map((agentDrop) => {
+                                  {agentDrops.map(agentDrop => {
                                     const { id, name, imgData, desc } = agentDrop;
                                     return (
                                       <div key={'agentDrop-' + id} style={{ display: 'flex' }}>

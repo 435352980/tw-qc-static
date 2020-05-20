@@ -10,8 +10,8 @@ export const goodAscSort = (key: keyof Good) => (good: Good) => (good[key] ? goo
  */
 export const filterFeatures = (list: Good[], featureKeys: (keyof Good)[]) =>
   featureKeys.length > 0
-    ? list.filter((good) =>
-        featureKeys.every((key) => !!good[key] || !good.goodType || good.goodType > 5),
+    ? list.filter(good =>
+        featureKeys.every(key => !!good[key] || !good.goodType || good.goodType > 5),
       )
     : list;
 
@@ -22,11 +22,11 @@ export const filterFeatures = (list: Good[], featureKeys: (keyof Good)[]) =>
  */
 export const filterLimit = (list: Good[], limitHeroKeys: string[]) =>
   limitHeroKeys.length > 0
-    ? list.filter((good) => {
+    ? list.filter(good => {
         const limitHeroes = good.limitHeroes;
         return (
           !limitHeroes ||
-          limitHeroes.find((info) => limitHeroKeys.includes(info.id)) ||
+          limitHeroes.find(info => limitHeroKeys.includes(info.id)) ||
           !good.goodType ||
           good.goodType > 5
         );
@@ -40,12 +40,12 @@ export const filterLimit = (list: Good[], limitHeroKeys: string[]) =>
  */
 export const filterExclusive = (list: Good[], exclusiveHeroKeys: string[]) =>
   exclusiveHeroKeys.length > 0
-    ? list.filter((good) => {
+    ? list.filter(good => {
         const exclusives = good.exclusives;
         return (
           (exclusives &&
             exclusives.length > 0 &&
-            exclusives.find((info) => exclusiveHeroKeys.includes(info.id))) ||
+            exclusives.find(info => exclusiveHeroKeys.includes(info.id))) ||
           !good.goodType ||
           good.goodType > 5
         );

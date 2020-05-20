@@ -7,13 +7,13 @@ import getDataSource from './getDataSource';
 
 const Main = () => {
   // console.log('render-main');
-  const dataHelper = useStoreState((state) => state.app.dataHelper);
-  const local = useStoreState((state) => state.app.local);
-  const setLocal = useStoreActions((actions) => actions.app.setLocal);
-  const setDataHelper = useStoreActions((actions) => actions.app.setDataHelper);
+  const dataHelper = useStoreState(state => state.app.dataHelper);
+  const local = useStoreState(state => state.app.local);
+  const setLocal = useStoreActions(actions => actions.app.setLocal);
+  const setDataHelper = useStoreActions(actions => actions.app.setDataHelper);
 
   useEffect(() => {
-    document.oncontextmenu = (e) => e.preventDefault();
+    document.oncontextmenu = e => e.preventDefault();
   }, []);
 
   const loadData = useCallback(async () => {

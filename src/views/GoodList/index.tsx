@@ -15,11 +15,11 @@ import Header from './Header';
 //   createStyles({ root: { display: 'flex', height: '100vh', flexDirection: 'column' } }),
 // );
 
-const Good: FC<RouteComponentProps> = (props) => {
-  const dataHelper = useStoreState((state) => state.app.dataHelper);
+const Good: FC<RouteComponentProps> = props => {
+  const dataHelper = useStoreState(state => state.app.dataHelper);
   const { goodDB } = dataHelper;
-  const filterCat = useStoreState((state) => state.good.filterCat);
-  const setFilterCat = useStoreActions((actions) => actions.good.setFilterCat);
+  const filterCat = useStoreState(state => state.good.filterCat);
+  const setFilterCat = useStoreActions(actions => actions.good.setFilterCat);
 
   const [menuOpen, setMenuOpen] = useState(false);
   const changeFilterCat = (cat: FilterCat) => {

@@ -38,7 +38,7 @@ const MakeToPanel: FC<{
         <TableContainer style={{ minHeight: '100%', minWidth: '100%', overflow: 'hidden' }}>
           <Table size="small">
             <TableBody>
-              {makeTos.map((makeTo) => {
+              {makeTos.map(makeTo => {
                 const { id, name, imgData } = makeTo;
                 return (
                   <TableRow key={id} hover>

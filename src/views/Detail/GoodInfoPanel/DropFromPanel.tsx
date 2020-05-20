@@ -47,7 +47,7 @@ const DropFromPanel: FC<{
         <TableContainer style={{ minHeight: '100%', minWidth: '100%', overflow: 'hidden' }}>
           <Table size="small">
             <TableBody>
-              {dropFroms.map((dropFrom) => {
+              {dropFroms.map(dropFrom => {
                 const { id, name, imgData, agent, desc } = dropFrom;
                 return (
                   <TableRow key={id} hover>

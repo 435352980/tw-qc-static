@@ -17,8 +17,8 @@ const SearchInput = styled(({ className, ...props }) => (
 `;
 
 const Header: FC<RouteComponentProps> = ({ history }) => {
-  const searchText = useStoreState((state) => state.search.searchText);
-  const setSearchText = useStoreActions((actions) => actions.search.setSearchText);
+  const searchText = useStoreState(state => state.search.searchText);
+  const setSearchText = useStoreActions(actions => actions.search.setSearchText);
 
   return (
     <AppBar position="fixed" elevation={1}>
@@ -30,7 +30,7 @@ const Header: FC<RouteComponentProps> = ({ history }) => {
           placeholder="请输入装备名称"
           style={{ marginLeft: 8, flex: 1 }}
           value={searchText}
-          onChange={(e) => setSearchText(e.target.value)}
+          onChange={e => setSearchText(e.target.value)}
         />
         <IconButton color="inherit" style={{ padding: 10 }} onClick={() => setSearchText('')}>
           <DeleteIcon />

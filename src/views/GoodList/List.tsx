@@ -22,8 +22,8 @@ interface GoodListProps extends RouteComponentProps {
 }
 
 const GoodList: FC<GoodListProps> = ({ list, history }) => {
-  const dataHelper = useStoreState((state) => state.app.dataHelper);
-  const local = useStoreState((state) => state.app.local);
+  const dataHelper = useStoreState(state => state.app.dataHelper);
+  const local = useStoreState(state => state.app.local);
   return (
     <AutoSizer>
       {({ width, height }) => (

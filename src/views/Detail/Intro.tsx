@@ -28,8 +28,8 @@ interface IntroProps {
 }
 
 const Intro: FC<IntroProps & RouteComponentProps> = ({ id, doCopy, doExport, history }) => {
-  const local = useStoreState((state) => state.app.local);
-  const dataHelper = useStoreState((state) => state.app.dataHelper);
+  const local = useStoreState(state => state.app.local);
+  const dataHelper = useStoreState(state => state.app.dataHelper);
 
   const [data, type] = dataHelper.getObjAndTypeById(id);
   const handleCopy = useCallback(() => doCopy(data.name), [data.name, doCopy]);
