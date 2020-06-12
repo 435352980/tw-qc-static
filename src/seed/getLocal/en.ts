@@ -65,7 +65,7 @@ const enLocal = {
       natureAttrInc: 'Earth',
     },
     stage: 'Stage',
-    stages: ['', '[Stage1]', '[Stage2]', '[Stage3]', '[Stage4]', '[Stage5]', '[Stage6]'],
+    stages: ['', '[Stage1]', '[Stage2]', '[Stage3]', '[Stage4]', '[Stage5]', '[Stage7]'],
     otherType: '[Other]',
     all: 'All',
     categories: {
