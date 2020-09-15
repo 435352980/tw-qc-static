@@ -8,3 +8,4 @@ export { default as getSaveCodes } from './getSaveCodes';
 export { default as getSaveFileInfo } from './getSaveFileInfo';
 export { default as convertMS } from './convertMS';
 export { default as getGoodTypeString } from './getGoodTypeString';
+export { default as readAsArrayBuffer } from './readAsArrayBuffer';

@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import GoodList from '@/views/GoodList';
 import Detail from '@/views/Detail';
 import Search from '@/views/Search';
+import Replay from '@/views/Replay';
 // import Scan from './Scan';
 // import Search from './Search';
 // import GoodInfo from './GoodInfo';
@@ -17,6 +18,7 @@ const PageFrame = () => {
       <Route path="/" exact component={GoodList} />
       <Route path="/detail/:id" component={Detail} />
       <Route path="/search" component={Search} />
+      <Route path="/replay" component={Replay} />
       {/* <Route path="/scan" component={Scan} />
       <Route path="/search" component={Search} />
       <Route path="/ginfo/:name" component={GoodInfo} />

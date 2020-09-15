@@ -33,7 +33,7 @@ export default {
   异端审判:
     '审判：0.2秒充能一次，最多5层充能，每次普攻附带（0.75X主属性）纯粹伤害。\r\n魔法免疫持续5秒。',
   噩梦战盔:
-    '死亡凝视：攻击25%几率1秒后提升后，暴击倍率提升0.3倍，敏捷增加 750，攻击伤害增加15%，持续时间6秒，内置CD15秒。',
+    '死亡凝视：攻击25%几率1秒后提升后，暴击倍率提升0.2倍，敏捷增加 750，攻击伤害增加15%，持续时间6秒，内置CD15秒。',
   '信仰 圣佑之盔':
     '生命恢复\r\n1/4概率触发，回复5%X最大生命值血量,回复10%X最大魔法值，内置CD3秒。\r\n使用1000范围提友方单位增加40%魔法抗性。\r\n持续15秒，冷却时间150秒',
   '生命咏叹 守护头盔':
@@ -498,84 +498,25 @@ export default {
   '圣辉 苍穹之曜':
     '每0.15秒充能一次审判打击，造成主属性x1.5通用伤害。主动开启魔法防御，冷却时间60秒',
   '贪婪 无尽诅咒':
-    '贪婪：\r\n5秒内攻速与攻击伤害1%提升,同时增加2%技能伤害。最大累计25层。冷却时间：1秒',
+    '贪婪：\r\n战斗中每秒叠加一层，每层提高1%伤害与2%所受伤害，上限25层，持续5秒，重复触发刷新持续时间。',
   '狂赫 深渊之魂':
-    '深渊之力：\r\n给予使用者12%的技能伤害（B型）和300点生命回复，半径375，持续8秒\r\n深渊的呼唤：\r\n给予目标友方8%的伤害输出和15%的生命回复，持续10秒',
-  'Troll Giant Hide': '',
-  'Troll Lord Hide': '',
-  'Mystical Branch': '',
+    '深渊之力：\r\n给予使用者12%的技能伤害（B型）和300点生命回复，半径375，持续8秒\r\n深渊的呼唤：\r\n给予目标友方8%的伤害输出和15%的生命回复，持续10秒，CD90秒。',
   "Uncle Van's Fruit": 'Active:\r\nIncreases EXP gain by 15% for 10 minutes',
   "Uncle Van's Melon": 'Active:\r\nIncrease skill damage by 12% for 60 seconds',
   "Uncle Van's Pumpkin": 'Active:\r\nRestores HP by 30%\r\nRestores MP by 5000',
   "Uncle Van's Carrot":
     "Active:\r\nATK DMG and MOV SPD increased by 40% for 5 minutes\r\nDoes not work if you're above level 400",
   'Book of Death': 'Active:\r\nOn use, immediately fills up fatigue',
-  'Minor Magic Stone': '',
-  'Lesser Magic Stone': '',
-  'Medium Magic Stone': '',
-  'Greater Magic Stone': '',
-  'Iron Ore': '',
-  'Silver Ore': '',
-  'Gold Ore': '',
-  'Yeti Tooth': '',
-  'Warm Fur': '',
-  'Silver Fang': '',
-  'Acorn of Luck': '',
-  'Kobold Bag': '',
-  'Kobold War Tactics': '',
-  'Kobold Magic Rod': '',
-  'Kobold Ring': '',
   'Magical Horn': 'Active:\r\nSummons a field boss',
-  'Hard Turtle Shell': '',
   'Frozen Crystal': 'Active:\r\nSummons a field boss',
-  'Bear Fur Cloak': '',
-  'Scarab Bone': '',
-  'Ghostly Thread': '',
-  'Corrupt Creations': '',
-  'Corrupt Crystal Fragment': '',
-  'Soul Stone': '',
-  'Mad Symbol': '',
-  'Mad Clown Icon': '',
-  'Clown Token': '',
   'Greatsword of Nature': "Passive:\r\nOn attack, decreases target's armor by 25 for 5 seconds\r\n",
-  'Sword of Nature': '',
   'Gloves of Nature': 'Passive:\r\nOn attack, increases AGI by 25 for 4 seconds\r\n',
   'Bow of Nature': 'Passive:\r\nOn attack, leaves a poison that deals 2000 damage per second\r\n',
-  'Staff of Nature': '',
   'Armor of Nature': 'Passive:\r\nAbsorbs damage taken by 75\r\n',
-  'Robe of Nature': '',
-  'Rifle of Nature': '',
   'Wings of Nature': 'Active:\r\nOn use, creates a portal that connects to Alfon Village',
-  'Green Crystal Golem Token': '',
-  'Raven Sword': '',
-  'Raven Greatsword': '',
-  'Raven Gloves': '',
-  'Raven Staff': '',
-  'Raven Rifle': '',
-  'Raven Armor': '',
-  'Raven Robe': '',
-  'Raven Helm': '',
-  'Raven Hood': '',
-  'Raven Ring': '',
-  'Raven Bow': '',
-  'Helmet of the Dead': '',
-  'Token of Death': '',
   'Nightmare Rod':
     'Active:\r\nSummons a field boss\r\nMay be used without powder\r\nHowever if used together with 8 Red Powder, it summons a powerful boss',
-  'Sword of Crimson Flames': '',
-  'Greatsword of Crimson Flames': '',
-  'Gloves of Crimson Flames': '',
-  'Staff of Crimson Flames': '',
-  'Rifle of Crimson Flame': '',
-  'Armor of Crimson Flames': '',
-  'Robe of Crimson Flames': '',
-  'Helm of Crimson Flames': '',
-  'Hood of Crimson Flames': '',
-  'Ring of Crimson Flames': '',
-  'Bow of Crimson Flames': '',
   'Flame Cloak': 'Passive:\r\nPeriodically deals 5000 magic damage to nearby enemies\r\n',
-  'Ragnaar Icon': '',
-  'Flame Token': '',
   'Orb of the Deep Sea':
     'Active:\r\nSummons a field boss\r\nGreen Powder x4 needed\r\nBlue Powder x4 needed',
   'Sword of Deep Sea':
@@ -584,23 +525,16 @@ export default {
     'Passive:\r\n20% Chance to deal (0.01 X ATK DMG X 2) splash damage on attack\r\n',
   'Greatsword of Deep Sea':
     'Passive:\r\n20% Chance to deal (0.01 X ATK DMG X 2) splash damage on attack\r\n',
-  'Staff of Deep Sea': '',
   'Bow of Deep Sea':
     'Passive:\r\n20% Chance to deal (0.01 X ATK DMG X 2) splash damage on attack\r\n',
   'Rifle of Deep Sea':
     'Passive:\r\n20% Chance to deal (0.01 X ATK DMG X 2) splash damage on attack\r\n',
-  'Horn of Deep Sea': '',
-  'Infected Tentacle': '',
-  'Tentacle Lord Icon': '',
-  'Tentacle Token': '',
   'Sword of Corruption': 'Passive:\r\n10% Chance to deal 5000 bonus damage on attack\r\n',
   'Gloves of Corruption': 'Passive:\r\n10% Chance to deal 5000 bonus damage on attack\r\n',
   'Greatsword of Corruption': 'Passive:\r\n10% Chance to deal 5000 bonus damage on attack\r\n',
   'Staff of Corruption': 'Passive:\r\n10% Chance to deal 5000 bonus damage on attack\r\n',
   'Bow of Corruption': 'Passive:\r\n10% Chance to deal 5000 bonus damage on attack\r\n',
   'Rifle of Corruption': 'Passive:\r\n10% Chance to deal 5000 bonus damage on attack\r\n',
-  'Giant Golem Icon': '',
-  'Big Golem Token': '',
   'Seal Breaking Gemstone': 'Passive:\r\nBring to the sleeping Ancient Ent to break its seal.\r\n',
   'Plates of Regeneration':
     'Passive:\r\nTemporarily boosts HP regen to 2500 HP per second when HP drops below 30% of max HP for 10 seconds\r\nCooldown: 55 seconds, cannot be dropped during cooldown\r\n',
@@ -610,20 +544,12 @@ export default {
     "Active:\r\nSummons fairy on use. Has two spells:\r\nHeals 40000 HP over 12 seconds\r\nReduces a target's defense by 820 for 10 seconds\r\nCooldown: 90 seconds",
   Lifestone:
     "Passive:\r\nIncreases allies' ATK SPD by 15%\r\nActivates revival on death\r\nCooldown: 180 seconds, cannot be dropped during cooldown\r\n",
-  'Mana Ancient Icon': '',
-  'Spirit Orb': '',
-  'Ancient Token': '',
   'Spiritus, the Sword of Elements':
     "Passive:\r\nEnables the use of Breath of Ancients every 5 seconds dealing (7.5 X (STR + AGI + INT)) magic damage on attack and reduces target's MOV SPD by 20% for 3 seoncds\r\n",
   'Storm Headdress':
     'Passive:\r\nOn crit, strike down a lightning dealing (3 X (STR + AGI + INT)) damage with a 15% chance to deal 5 times the original amount (2 second cooldown)\r\n',
   'Visvire, the Hammer of Storm':
     'Passive:\r\nActivates Source of Power on skill cast dealing (STR X 1.5) magic damage on next attack\r\nAlso increases MOV SPD by 100% and STR by 425 for 6 seconds\r\nCooldown: 10 seconds, cannot be dropped during cooldown\r\n',
-  'Spirit of Forest': '',
-  'Spirit Beast Icon': '',
-  'Beast Token': '',
-  "Hydra's Poisonous Tooth": '',
-  'Hydra Scale': '',
   'Sword of Deadly Poison':
     'Passive:\r\nInflicts poison that periodically deals 800 damage on attack\r\n',
   'Greatsword of Deadly Poison':
@@ -636,37 +562,15 @@ export default {
     'Passive:\r\nInflicts poison that periodically deals 800 damage on attack\r\n',
   'Rifle of Deadly Poison':
     'Passive:\r\nInflicts poison that periodically deals 800 damage on attack\r\n',
-  'Armor of Deadly Poison': '',
-  'Robe of Deadly Poison': '',
-  'Helm of Deadly Poison': '',
-  'Hood of Deadly Poison': '',
-  'Ring of Deadly Poison': '',
-  'Hydra Token': '',
   'Bloodsword Tepethia':
     'Passive:\r\nOn attack, drains 10% of damage dealt as life (up to 800)\r\n',
   'Blood Cannon Tepes': 'Passive:\r\nOn attack, drains 10% of damage dealt as life (up to 800)\r\n',
-  "Count of Wallachia's Armor": '',
-  "Count of Wallachia's Robe": '',
-  "Count of Wallachia's Helm": '',
-  "Count of Wallachia's Hood": '',
-  "Count of Wallachia's Ring": '',
   'Sanguiel, the Bloodspear':
     'Passive:\r\nOn attack, drains 8% of damage dealt as life (up to 600)\r\n',
-  Bloodstone: '',
-  "Count's Memento": '',
-  "Count's Old Cape": '',
-  'Ancient Writings': '',
-  'Count Token': '',
-  'Jack Pumpkin Helm': '',
-  'Jack Pumpkin Hood': '',
   'Pumpkin Rod':
     'Active:\r\nOn use, activates Throw Pumpkin dealing (7500 + INT X 40) magic damage.\r\nStuns target for 1 second and heals caster for 10000 HP\r\nUsable on magic immune targets (still damage type magic)\r\nCooldown: 75 seconds, cannot be dropped during cooldown',
   'Candy Bag':
     'Active:\r\nOn use, throws out 5 random candies\r\nCinnamon Candy: +50 STR\r\nIcicle Candy: +50 AGI\r\nMana Candy: +50 INT\r\nSoul Candy: +10% EXP Received\r\nDuration: 30 minutes for all candies',
-  'Jack Pumpkin Token': '',
-  'Magical Ore Deposit (Jack-o-Lantern)': '',
-  'Yellow Crystal Golem Token': '',
-  Orichalcum: '',
   'Dragonsword Lainhart':
     "Passive:\r\n10% Chance to activate Dragon's Claw on attack dealing (4500 + main stat X 2.5) magic damage\r\n",
   'Dragonbow Aience':
@@ -677,11 +581,6 @@ export default {
     "Passive:\r\n10% Chance to activate Dragon's Claws on attack dealing (4500 + main stat X 2.5) magic damage\r\n",
   'Dragon Armor Magron': 'Passive:\r\nAbsorbs damage taken by 300\r\n',
   "Dragon's Helm Agron": 'Active:\r\nOn use, block magic every 8 minutes',
-  'Dragon Bone': '',
-  'Dragon Scale': '',
-  'Dragon Heart': '',
-  'Wings of Death Token': '',
-  'Sealed Weapon': '',
   'Leoreus, the Greatsword of Flame':
     'Passive:\r\n10% Chance to create Flame Explosion on attack dealing (12000 + STR X 9) magic damage\r\nDamage is affected by flame affinity\r\n',
   'Irbeth, the Sword of Lightning':
@@ -697,13 +596,6 @@ export default {
     'Passive:\r\nOn use, grants invisibility for 20 seconds (has cooldown of 60 seconds)\r\n',
   'Ring of Resonance':
     'Active:\r\nOn use, activates Resonance, refreshing the cooldown of the last skill used\r\nDoes not apply to ultimate skill or items\r\nCooldown: 120 seconds, cannot be dropped during cooldown',
-  'Magical Token': '',
-  'Magical Ore Deposit (Mage Lord)': '',
-  'Blue Crystal Golem Token': '',
-  Mithril: '',
-  'Guardian Ring': '',
-  'Gatekeeper Icon': '',
-  'Guardian Token': '',
   'Karonphniamm, the Holy Sword':
     'Passive:\r\nIF main stat is STR: 10% Chance to activate Holy Strike on attack dealing (STR X 12) magic damage\r\nIF main stat is AGI or INT: 10% Chance to activate Holy Strike on attack dealing (AGI X 12) magic damage\r\n',
   'Klenetia, the Holy Staff':
@@ -714,20 +606,12 @@ export default {
     'Passive:\r\n10% Chance to create a barrier of 10000 armor on being hit for 4 seconds\r\nCooldown: 12 seconds\r\n',
   'Sacred Helm':
     'Active:\r\nOn use, block magic every 4 minutes\r\nShares cooldown with Helm of Battle',
-  "Fragment of Angel's Feather": '',
-  'A Page of the Bible': '',
-  'Sealed Archangel Wings': '',
-  'Guardian Angel Token': '',
-  'Skeris, the Unholy Helm': '',
   'Eximelia, the Unholy Sword':
     'Passive:\r\n10% Chance to activate Dark Strike on attack dealing (12 X AGI) magic damage\r\n',
   'Dekaros, the Unholy Armor':
     "Passive:\r\n12% Chance to reduce attacker's armor by 125 for 5 seconds on being hit\r\n",
   'Alkate, the Unholy Bow':
     'Passive:\r\n12% Chance to activate Dark Spike on attack dealing (AGI X 12) magic damage\r\n',
-  "Fragment of Corrupt Angel's Feather": '',
-  'A Page of the Unholy Book': '',
-  'Corrupt Angel Token': '',
   'Robe of Everfrost':
     'Passive:\r\n10% Chance to activate Frost Armor on being hit\r\nGrants 400 armor for 15 seconds\r\n',
   'Helm of Everfrost':
@@ -736,17 +620,12 @@ export default {
     'Passive:\r\n10% Chance to freeze attacker for 1.5 seconds on being attacked\r\n',
   'Winter Rose':
     'Passive:\r\n10% Chance to temporarily boost INT by 250 on attack for 6 seconds\r\nDoes not stack\r\n',
-  Frorist: '',
-  'Everfrost Token': '',
   'Okelanq, the Spear of Frost':
     "Passive:\r\n13% Chance to activate Frost effect on attack\r\nDeals (main stat X 12) magic damage and reduces enemy's MOV SPD by 20% for 3 seconds\r\n",
   'Okelanq, the Bow of Frost':
     "Passive:\r\n13% Chance to activate Frost effect on attack\r\nDeals (main stat X 12) magic damage and reduces enemy's MOV SPD by 20% for 3 seconds\r\n",
-  'Lord of Revolver': '',
   'Frost Web Brooch':
     "Passive:\r\n+10% damage dealt on attack\r\n8% Chance to reduce target's armor by 175 on attack for 5 seconds\r\n",
-  'Frozen Cobweb': '',
-  'Spider Token': '',
   "Winter's Tear":
     'Passive:\r\nSlows enemies on attack\r\nEvery 8th attack unleashes Chilling Strike that ignores all resistance\r\nDeals (STR X 1.8 + AGI X 1.5) pure damage\r\nDamage is affected by ice/water affinity\r\n',
   Frostbane:
@@ -755,10 +634,6 @@ export default {
     'Active:\r\nOn use, increases ATK DMG by 15000 and STR by 1000 for 8 seconds\r\nCooldown: 25 seconds',
   'Ripple Snow':
     'Passive:\r\nOn use, activates Frozen Shard, launching a ball of frost to targeted location\r\nIn 275 AoE radius, deals (INT X 60) magic damage and freezes enemies in 425 AoE radius for 2 seconds\r\nDamage is affected by ice/water affinity\r\n',
-  'Frostspider Lord Token': '',
-  'Magical Ore Deposit (Frostspider Lord)': '',
-  'White Crystal Golem Token': '',
-  Adamantium: '',
   'Claws of Destruction':
     "Passive:\r\n(1 + (0.125 X HIT COUNT))% Chance to activate Doomsday on attack dealing (42 X (STR + AGI)) + (8 X ATK DMG) magic splash damage and stuns for 0.1 seconds\r\nScales with user's stats\r\nFailing to proc increase proc chance on subsequent attacks\r\n",
   'Bullet of Destruction':
@@ -767,12 +642,6 @@ export default {
     "Active:\r\nSteals target's soul on use for 5 seconds, healing hero for (max HP / 7.5) and deals (main stat X 8 + max HP / 7.5) magic damage to target\r\nIf target dies while draining, grants 350 AGI for 5 minutes\r\nCooldown: 150 seconds, cannot be dropped during cooldown",
   'Eye of the Abyss':
     "Passive:\r\nNearby allies' skill damage +4%\r\nActive:\r\nOn use, summons 4 monsters\r\nINT increase is lowered by half while on cooldown\r\nCooldown: 100 seconds, cannot be dropped during cooldown",
-  'Slayer Boots': '',
-  'Dark Wings': '',
-  'Demon Lord Token': '',
-  'Remnants of Darkness': '',
-  'Red Crystal Golem Token': '',
-  'Dark Matter': '',
   'Shell Sword':
     "Passive:\r\n25% Chance to deal pure splash damage on attack\r\nDamage depends on hero's ATK DMG\r\n",
   'Crab Armor':
@@ -782,8 +651,6 @@ export default {
   'Waterfall Shoes':
     'Passive:\r\nOn kill, 8% chance to temporarily boost EXP gain by 12% and MP regen by 15% for 30 seconds\r\n',
   'Ivory Cane': 'Passive:\r\nDeal 1500 bonus magic damage on attack\r\n',
-  'Walrus Skin Cloak': '',
-  'Tusk Hunter': '',
   'Icicle Bow':
     'Passive:\r\nApplies bonus magic damage and a slow effect on attack\r\nEach attack deals a bonus of (Water/Ice affinity X 800 ~ 1500) magic damage\r\nSlow effect lasts for 0.75 seconds\r\n',
   'Snowman Pendant':
@@ -818,7 +685,6 @@ export default {
   'Mask of Blood':
     'Active:\r\nOn use, activates Bloodlust granting 30% life steal, 400 main stat, and 100% bonus ATK and MOV SPD for 8 seconds\r\nCooldown: 90 seconds, cannot be dropped during cooldown',
   'Cursed Mask': 'Active:\r\nSummons a field boss',
-  'Demon Hunter': '',
   'Stone Plates':
     'Active:\r\nOn use, activates Stone Form\r\nGrants the user with an 8000 shield for 2 seconds and 4000 bonus HP and MP regen\r\nCooldown: 40 seconds, cannot be dropped during cooldown',
   'Bat Wings':
@@ -837,9 +703,6 @@ export default {
     'Active:\r\nOn use, transforms user for 12 seconds\r\nGrants the user with 250 all stats, increase magic defense by 60%, and heals 1% of max HP per second over duration\r\nCooldown: 120 seconds, cannot be dropped during cooldown',
   'Staff of Contagion':
     'Active:\r\nOn use, creates a poisonous field at the target location for 8 seconds\r\nDeals (INT X 125) total magic damage in a 375 AoE over duration\r\nCooldown: 75 seconds, cannot be dropped during cooldown',
-  'Essence of Corruption': '',
-  'Ancient Fragment of Ruins': '',
-  'Corrupt Token': '',
   Hatred:
     'Passive:\r\nConverts 0.035% of damage dealt into INT for a max of 600 INT (can be released)\r\nActive:\r\nOn use, can release stored INT that deals ((0.5 + ( stored INT - 300 ) / 600) X INT X 90) magic damage to enemies in a 450 radius around user\r\nStuns for 1.5 seconds\r\nAt least 300 stored INT required to use\r\nCooldown: 75 seconds, cannot be dropped during cooldown',
   'Flameshard Armor':
@@ -849,9 +712,6 @@ export default {
   Inferno:
     'Passive:\r\n20% Chance to activate Burning Wrath on attack that causes 5 explosions on target over 2.5 seconds\r\nEach explosion deals (AGI X 20) magic damage to enemies in a 325 radius around target\r\nRestores 1% HP per explosion for a total of 5% max HP\r\nCooldown: 10 seconds, cannot be dropped during cooldown\r\n',
   'Crown of Fervor': 'Passive:\r\nConverts 2% of max HP into INT (max 500)\r\n',
-  'Spirit of Nightmare': '',
-  'Essence of Anger': '',
-  'Nightmare Token': '',
   'Water Cannon':
     'Active:\r\nOn use, releases Water Beam dealing (INT X 25) magic damage per 0.125 seconds and pushes all enemies hit\r\nDamage is affected by Ice/Water Affinity\r\nCooldown: 30 seconds, cannot be dropped during cooldown',
   'Tunic of Subtlety': 'Passive:\r\nDodges upto 3 attacks every 20 seconds\r\n',
@@ -861,48 +721,22 @@ export default {
     'Passive:\r\n12.5% Chance to restore 2.5% HP on being hit\r\nActive:\r\nOn use, increases max HP by 20000 and MP by 7500 for 15 seconds\r\nCooldown: 180 seconds, cannot be dropped during cooldown',
   'Oath of Courage':
     'Passive:\r\nIncreases nearby allies magic defense by 8%\r\nActive:\r\nOn use, consumes HP to activate Blessing\r\nCreates a shield for all allies within 400 radius\r\nCooldown: 60 seconds',
-  'Pure Steel': '',
-  'Mark of Storm': '',
-  'Mana Orb': '',
-  'Turtle Token': '',
   'Death Scythe':
     "Passive:\r\n12% Chance to activate Strike of Malice on attack dealing (main stat X 35) magic damage\r\nActive:\r\nOn use, activates Soul Reaper dealing (main stat X 150) magic damage and slowing target's MOV SPD by 50%\r\nAlso gives +5% skill damage to user\r\nCooldown: 150 seconds, cannot be dropped during cooldown",
   'Staff of Souls':
     'Active:\r\nOn use, activates Dark Howl dealing (INT X 19.75) magic damage and stacks magic damage taken of target by 1% per wave for 4 waves\r\nCooldown: 75 seconds, cannot be dropped during cooldown',
   'Robe of the Reaper':
     'Active:\r\nOn use, activates Death Pact granting the user 850 INT for 11 seconds at the cost of 40% HP\r\nCooldown: 120 seconds, cannot be dropped during cooldown',
-  'Brooch of Darkness': '',
   'Bone Necklace':
     'Passive:\r\nEvery 8 seconds, activates one of the following:\r\nAnger: +10% skill damage\r\nOblivion: +16% damage reduction\r\nObsession: (main stat X 20%) HP regen\r\nActive:\r\nOn use, temporarily activates all effects\r\nCooldown: 90 seconds, cannot be dropped during cooldown',
-  'Spirit of Abyss': '',
-  'Sealed Spirit of Abyss': '',
-  'Orb of Oblivion': '',
-  'Sealed Orb of Oblivion': '',
-  'Fragment of Oblivion': '',
-  'Sealed Fragment of Oblivion': '',
-  'Skeleton Bone': '',
-  'Sealed Skeleton Bone': '',
-  'Skeleton Token': '',
   'Parasitic Staff':
     'Active:\r\nOn use, activate Parasite for 5 seconds\r\nIf target is an enemy: deals (INT X 5) magic damage per second and lose 10% heal received\r\nIf target is an ally: grants target with 40% magic defense and heals for INT X 1 per second\r\nIf target is self: grants target with 40% magic defense and heals for INT X 0.5 per second\r\nUpon expiration, will explode dealing (INT X 40) magic splash damage\r\nCooldown: 25 seconds, cannot be dropped during cooldown',
   'Hood of the Fallen':
     "Passive:\r\nActivates Hands of Fallen on death\r\nExplodes dealing (main stat X 275) magic damage to enemies nearby\r\nScales with user's stats\r\n",
   'Shroud of Perseverance':
     'Passive:\r\n8% Chance to activate Perseverance on attack\r\nGrants user with +50% MV and ATK SPD, +100 main stat per tick for 10 seconds, and a 40% heal\r\nCooldown: 30 seconds, cannot be dropped during cooldown\r\n',
-  'Heart of Fire': '',
-  'Sealed Heart of Fire': '',
-  'Dark Crystal': '',
-  'Sealed Dark Crystal': '',
-  'Proof of Purification': '',
-  'Sealed Proof of Purification': '',
-  'Zombie Token': '',
   'Embrace of Nature':
     "Active:\r\nOn use, temporarily increases nearby allies' max HP\r\nIf self or summon: grants +6000 HP and +5% skill damage for 45 seconds\r\nIf ally is a hero: grants +3000 HP for 45 seconds\r\nCooldown: 60 seconds, cannot be dropped during cooldown",
-  'Purified Water of Nature': '',
-  'Sealed Purified Water of Nature': '',
-  'Fragment of the Wind': '',
-  'Sealed Fragment of the Wind': '',
-  'Ent Token': '',
   'Griseus, the Sword of Protection':
     'Active:\r\nOn use, activates Ethereal Strike that (max MP X 2) pure damage and stuns for 1 second if target is enemy\r\nIf an ally is hit: heals the target for (max HP X 25%)\r\nCooldown: 15 seconds, cannot be dropped during cooldown',
   'Ring of the Storm':
@@ -913,22 +747,8 @@ export default {
     'Passive:\r\n10% Chance to activate Dragonic Skin on being damaged which blocks any amount of damage and heals you for that amount\r\nCooldown: 4 seconds, cannot be dropped during cooldown\r\nActive:\r\nOn use, blocks harmful magic every 3 minutes\r\nLasts 5 seconds\r\nCooldown: 180 seconds',
   'Nephthys, the Engraved Ring':
     'Active:\r\nOn use, activates Gifted Power which grants +300 HP regen and +5% magic defense every 1.5 seconds up to 5 times or fully healed\r\nCooldown: 120 seconds',
-  'Essence of Darkness': '',
-  'Sealed Essence of Darkness': '',
-  Antimatter: '',
-  'Sealed Antimatter': '',
-  'Frozen Debris': '',
-  'Sealed Frozen Debris': '',
-  'Token of Darkness': '',
-  'Steel of God': '',
-  'Sealed Steel of God': '',
-  'Essence of Light': '',
-  'Sealed Essence of Light': '',
-  "God's Page": '',
-  "Sealed God's Page": '',
   'Guardian of the Skies':
     "Passive:\r\nActivates Power of Skies on casting skill dealing (main stat X 1) pure damage, increase the user's MOV SPD by 5%, and main stat by 275 for 4 seconds\r\nCooldown: 16 seconds\r\nActive:\r\nOn use, activates Star of Creation\r\nDeals (main stat X 15) magic damage to all enemies in targetted area and stuns for 2 seconds\r\nUpon expiration, will explode dealing (main stat X 115) magic damage and reduce enemy armor by 250\r\nCooldown: 150 seconds, cannot be dropped during cooldown",
-  'Archangel Token': '',
   'The Ender':
     'Passive:\r\nWhen attacking an enemy under 50% HP, increases damage output by 15% for 5 seconds\r\nEmpowers next attack for (main stat X 125) magic damage every 12 seconds\r\nCannot be dropped during cooldown\r\n',
   'Armor of Grudge':
@@ -936,42 +756,18 @@ export default {
   'Eyes of the Watcher':
     'Active:\r\nOn use, activates Death Gaze dealing (main stat X 250) magic damage and increasing magic damage taken by enemies (Type-A) by 8% for 4 seconds\r\nCooldown: 120 seconds, cannot be dropped during cooldown',
   'Ring of Destruction': 'Passive:\r\n15% chance to do 40% bonus damage upon dealing damage\r\n',
-  'Spearhead of Death': '',
-  'Fragment of Chaos': '',
-  'Fiend Token': '',
-  'Chaos Magic Stone': '',
   'Shackles of Heaven':
     'Active:\r\nOn use, activates Shackles of Heaven:\r\nLatches onto all enemies in targetted area dragging them for 5 seconds\r\nDeals (main stat X 25) for every 200 distance traveled\r\nReduces damage output of shackled enemies by 50%\r\nNote: Shackles can be released if target is knockback immune or distance between user and target reaches 1500 or more range\r\nCooldown: 30 seconds, cannot be dropped during cooldown',
-  'Aegis of Storm': '',
-  'Essence of Storm': '',
-  'Shining Fragment of Ruins': '',
   'Heart of Volcano':
     'Passive:\r\nGain one stack after 5 seconds of attacking, for a max of 5 stacks and 25 seconds of attacking\r\nStacks last for 15 seconds while in combat\r\nActive:\r\nOn use, activates Grand Explosion causing the user to explode and die after 1 second of delay.\r\nDeals (1 + stacks X 50%) X (main stat X 250) magic damage and stuns for 3 seconds\r\nCooldown: 180 seconds, cannot be dropped during cooldown',
-  'Aegis of Flame': '',
-  'Essence of Flame': '',
   'Grail of Eternity':
     'Passive:\r\nCreates Water Barrier that absorbs up to 10000 damage and provides 1% HP and MP regen every 8 seconds\r\n',
-  'Aegis of Sea': '',
-  'Essence of Sea': '',
   'Dragonic Orb':
     'Active:\r\nOn use, unleashes Draconic Power to summon a Dragon, grants the user 90% magic reduction and render the user invulnerable to instant deaths for 15 seconds.\r\nDragon skills:\n↳ Flame Breath [Q]: (main stat X 75) magic damage per second to enemies in target area\n↳ Dragon Scale [W]: Absorbs up to 30000 damage, +7500 HP regen, and lasts 2 seconds\r\nCooldown: 90 seconds, cannot be dropped during cooldown',
   'Ancient Hourglass':
     'Passive:\r\nEvery 3 seconds, your next attack strikes for 2 additional times\r\nActive:\r\nOn use, refreshes a random skill\r\nCooldown: 30 seconds, cannot be dropped during cooldown',
-  'Burning Bone Fragments': '',
-  "Dragon's Eye": '',
-  'Bone Dragon Icon': '',
-  'Bone Dragon Token': '',
-  'Prius Silver Coin': '',
   'Curse of Greed':
     'Passive:\r\nOn attack inflicts Greed\r\nWhen in combat for 5 seconds, increases ATK SPD and DMG output by 1%\r\nAlso increases damage taken by 2%\r\nCan be stacked up to 25 times\r\nCooldown: 1 second\r\n',
-  'Fragment of Soul': '',
-  'Fragment of Hell': '',
-  'Mark of Lord': '',
-  'White Powder': '',
-  'Green Powder': '',
-  'Blue Powder': '',
-  'Red Powder': '',
-  'Holy Powder': '',
   'Tiny Essence of Storm':
     "Active:\r\nDeals (max HP X 20%) pure damage to the target and stuns for 1 second\r\nWorks only if user level is greater than or equal to target's level\r\nCooldown: 180 seconds",
   'Tiny Essence of Earth':
@@ -984,51 +780,23 @@ export default {
     'Active:\r\n성스러움을 느낀다. (Does nothing special, just a graphic. Probably just something to be of use in later content?)\r\nCooldown: 180 seconds',
   'Tiny Essence of Chaos':
     'Active:\r\nCorrupts target monster. (Does nothing special. Probably just something to be of use in later content?)\r\nCooldown: 180 seconds',
-  'Key of Storm': '',
-  'Key of Flame': '',
-  'Key of Sea': '',
   'Acorn Bomb':
     'Active:\r\nOn use, launches an Acorn Bomb dealing (500 + main stat X 25) magic damage and stuns for 2 seconds\r\nCooldown: 30 seconds\r\nDoes not stun bosses',
-  'Rainbow Crystal Golem Token': '',
   Glasses: 'Passive:\r\nEnhances your field of sight at night to be the same as day-time.\r\n',
-  Bag: '',
-  'Slightly Sturdy Bag': '',
-  'Pretty Sturdy Bag': '',
-  'Sturdy Bag': '',
-  'Very Sturdy Bag': '',
-  'Bag of Strength': '',
-  'Bag of Mighty Strength': '',
-  'Bag of Mighty Strength +1': '',
-  'Bag of Hell': '',
-  'Bag of Corruption': '',
-  'Bag of Destruction': '',
+  'Bag of Demise':
+    "Active:\r\nOn use, throws Eitr\r\nIncreases target's damage output by 7.5% for 15 seconds\r\nEitr duration: 30 seconds\r\nCooldown: 15 seconds, cannot be dropped during cooldown",
   'Bag of Explosion':
     'Active:\r\nOn use, obtains Throw Bomb\r\nReplaces Throwing Healing Potion with Throw Bomb. Use again to revert back\r\nCooldown: 2 second',
   'Bag of Despair':
     'Active:\r\nOn use, obtains Throw Bomb\r\nReplaces Throwing Healing Potion with Throw Bomb. Use again to revert back\r\nCooldown: 2 second',
-  'Silky Bag': '',
-  'Very Silky Bag': '',
-  'Fruit-filled Bag': '',
-  'Candy-filled Bag': '',
-  'Candy-filled Bag +1': '',
-  'Bag of Heaven': '',
-  'Bag of Life': '',
-  'Bag of Mother Nature': '',
   'Bag of Universe':
     'Active:\r\nOn use, throws Elixir\r\nElixir restores 100% of max HP and clears debuffs on consumption\r\nLasts 60 seconds on ground\r\nCooldown: 15 seconds, cannot be dropped during cooldown',
-  'Golden Fang': '',
-  'Beast Hunter': '',
   'Sword of Darkness':
     'Passive:\r\n10% Chance to amplify ATK DMG by 2x for 5 seconds on attack\r\n',
-  'Greatsword of Darkness': '',
-  'Gloves of Darkness': '',
   'Staff of Darkness': 'Passive:\r\nIncreased MP regen\r\n',
   'Bow of Darkness': 'Passive:\r\n10% Chance to amplify ATK DMG by 2x for 5 seconds on attack\r\n',
-  'Rifle of Darkness': '',
   'Sword of Pure Flame':
     'Passive:\r\n10% Chance to amplify ATK DMG by 2x for 5 seconds on attack\r\n',
-  'Greatsword of Pure Flame': '',
-  'Gloves of Pure Flame': '',
   'Staff of Pure Flame': 'Passive:\r\nIncreased MP regen\r\n',
   'Bow of Pure Flame':
     'Passive:\r\n10% Chance to amplify ATK DMG by 2x for 5 seconds on attack\r\n',
@@ -1057,7 +825,6 @@ export default {
   'Parasitic Sword':
     'Passive:\r\n30% Chance to use Splash effect on attack and 15% chance to steal 600 HP\r\n',
   'Staff of Tentacles': 'Passive:\r\nRestores 500 HP and MP on kill\r\n',
-  'Monster Hunter': '',
   'Laksha, the Reigning Sword of Poison':
     'Passive:\r\nDeals 3000 bonus poison damage on attack\r\n',
   'Staff of Void':
@@ -1070,7 +837,6 @@ export default {
     'Passive:\r\nOn attack, heals 14% of damage dealt (max 1250)\r\n',
   'Staff of Madness':
     'Passive:\r\nOn skill cast, empower nearby allies with 7.5% skill damage and 200 HP regen for 6 seconds\r\n',
-  'Monster Blaster': '',
   'True Blood Cannon Tepes': 'Passive:\r\nOn attack, heals 18% of damage dealt (max 1500)\r\n',
   'Leoreus, the Greatsword of Explosion':
     'Passive:\r\n10% Chance to activate Conflagration on attack. Deals ((16000 + STR X 12) X flame affinity) magic damage\r\n',
@@ -1136,8 +902,6 @@ export default {
     'Active:\r\nOn use, activates Dragon Buster, a projectile that explodes in targetted area stunning for 5 seconds\r\nDeals (((main stat X 75) + (max HP X 2.5%)) X 25%) magic damage for 8 seconds\r\nCooldown: 45 seconds',
   'Hydro Buster':
     'Passive:\r\nOn healing, activates Healing Water granting healed allies ((INT X 0.2) X water affinity) HP regen for 3 seconds\r\nActive:\r\nOn use, activates Hydro Buster pushing and damaging targets\r\nPushes enemies to a max range of 1000 over the duration of 0.5 seconds\r\nDamages enemies for (INT X 25) magic damage per second for 0.125 seconds\r\nCooldown: 20 seconds',
-  Rainmaker:
-    'Passive:\r\nOn healing, activates Healing Water granting healed allies ((INT X 0.4) X water affinity) HP regen for 3 seconds\r\nActive:\r\nOn use, activates Rainstorm around the user\r\nRestores INT X 1 max HP to all nearby allies every 2 seconds for 6 seconds\r\nCooldown: 15 seconds',
   'Devil Blaster':
     'Active:\r\nOn use, activates Devil Blast, shooting a projectile at the targetted area dealing ((AGI X 175) + (max HP X 6%)) magic damage\r\nCooldown: 75 seconds, cannot be dropped during cooldown',
   'Bullet of Ruin':
@@ -1145,15 +909,13 @@ export default {
   'Crimson Cross':
     'Passive:\r\nEmpowers allies upon healing them\r\nEmpowered allies receive: +5% skill damage and healing received for 4 seconds\r\nActive:\r\nOn use, activates Bloody Purge dealing (AGI X 25) magic damage to enemies and healing allies for (INT X 2.5) HP\r\nCooldown: 12 seconds, cannot be dropped during cooldown',
   'Claws of Beriel':
-    'Passive:\r\n((hit count X 12.5%) + 1)% Chance to activate Doomsday on attack dealing (((STR + AGI) X 65) + (ATK DMG X 10)) magic splash damage and stuns for 0.1 seconds\r\nChance to activate increases if it fails to proc\r\n',
+    'Passive:\r\n(1 + 0.125 X attacks without activation)% Chance to activate Doomsday on attack\r\nDeals (ATK DMG X 10 + (STR + AGI) X 65) magic damage\r\nStuns for 0.1 seconds\r\n',
   'Espishu, the Sword of Eternity':
     'Passive:\r\n10% Chance to activate Chaos Strike on attack dealing ((STR + AGI) X 37.5) magic damage\r\n',
-  'Espishu, the Sword of Chaos':
-    'Passive:\r\n10% Chance to activate Chaos Strike on attack dealing ((STR + AGI) X 45) magic damage\r\n',
   'Blazing Soul':
     'Passive:\r\n~20.8% Chance to activate Fervor on casting skill gaining one stack\r\nIncreases ATK DMG by 2500 per stack and deals (ATK DMG X (1 + stack X 20%) + (STR X 10)) magic damage\r\nDamage is affected by flame affinity\r\nStacks expire after 7.5 seconds of not casting a skill\r\n',
   'Ethenos, the Staff of Space':
-    'Active:\r\nOn use, activates Dimensional Explosion dealing (INT X 300) magic damage in targetted area\r\nCooldown: 75 seconds',
+    'Active:\r\nOn use, activates Dimensional Explosion dealing (INT X 300) magic damage in targetted area\r\nCooldown: 60 seconds, cannot be dropped during cooldown',
   'Griveddon, the Bow of Certain Destruction':
     'Passive:\r\n10% Chance to activate Chaos Strike on attack dealing ((STR + AGI) X 37.5) magic damage\r\n',
   'Chronos, the Cannon of Time':
@@ -1170,14 +932,10 @@ export default {
     'Passive:\r\nEmpowers next attack with True Poison on skill cast dealing (AGI X stacks X 1.3) magic damage per second for a max of 10 stacks\r\nOnce stacks are maxed, deals (AGI X 130) magic damage and stun for 0.375 seconds\r\nActive:\r\nOn use, activates Illusion on next attack received blocking any spells that deal more than 10% of max HP\r\nOn block, reflects damage back to enemy and deals (2 X (min(1, damage dealt / (max HP + 10%))) X max HP) magic damage and stuns for 2 seconds\r\nAlso grants user with: up to a max of +1250 AGI and +10% crit chance for 15 seconds\r\nCooldown: 105 seconds, cannot be dropped during cooldown',
   'Crimson Reaper':
     'Passive:\r\nEvery 14th attack activates Wrath of Blood dealing (main stat X 40) magic splash damage and heals user for ((main stat X 60%) + 3000) HP\r\n30% Chance to activate Blood Awakening on casting skill to increase AGI by 800 and empower Wrath of Blood for 7.5 seconds\r\nWhile empowered, Every 5th attack activates Empowered Wrath of Blood:\r\nDeals (1.25 X main stat X 40) magic splash damage\r\nHeals user for ((main stat X 90%) + 4500) HP\r\nHeals nearby allies for ((main stat X 45%) + 2250) HP\r\nBlood Awakening cooldown: 15 seconds, cannot be dropped during cooldown\r\n',
-  'Cosmic Reaper':
-    'Passive:\r\nOn every 12th attack, activates Dimension Cut. Deals (main stat X 50) magic damage to target and enemies around it\r\nOn skill cast, activates Awakening. Increases AGI by 1000 and regenerates 7.5% max Hp per second for 7.5 seconds\r\nIf user is NOT Martial Artist: On-attack activates every 4th attack for duration\r\nSpellcast Cooldown: 15 seconds, cannot be dropped during cooldown\r\n',
   'Oceanus, the Sword of Light':
     'Passive:\r\nOn skill cast, gain a stack and empower next attack with light (up to a max of 6 stacks)\r\nNon-empowered attacks have ~9% chance to deal (main stat X (15 + stacks X 4)) magic damage\r\nEmpowered attacks deal (2.5 X main stat + 15000) pure damage and has a ~30.7% chance to crit for 2.5x the normal amount\r\nEmpowered attacks also heal user for 3% of damage dealt (affected by crit damage)\r\nActive:\r\nOn use, activates Trail of Light sending (stacks X 2) daggers to target. Each dagger deals (main stat X 12.5) magic damage\r\nCooldown: 80 seconds, cannot be dropped during cooldown',
   Oblivion:
     "Passive:\r\n25% Chance to activate Devastation on attack causing enemies within a frontal cone area to take (STR X 80) magic damage\r\nReduces armor by 225 and magic defense by 2% for 6 seconds\r\nCooldown: 5 seconds\r\nActive:\r\nOn use, activates Oblivion granting the user with 75% ATK SPD, 150 STR, and 1.5% skill damage per 1 ~ 0.5 seconds while draining user's HP\r\nStacks up to 10 times and drains (1500 + seconds elapsed X 500) HP per second\r\nCooldown: 60 seconds, cannot be dropped during cooldown",
-  Chaos:
-    "Passive:\r\n25% Chance to activate Devastation on attack causing enemies within a frontal cone area to take (STR X 100) magic damage\r\nReduces armor by 250 and magic defense by 2.5% for 6 seconds\r\nCooldown: 5 seconds\r\nActive:\r\nOn use, activates Oblivion granting the user with 100% ATK SPD, 200 STR, and 1.5% skill damage per 1 ~ 0.5 seconds while draining user's HP\r\nStacks up to 10 times and drains (3000 + seconds elapsed X 750) HP per second\r\nCooldown: 60 seconds, cannot be dropped during cooldown",
   "Winter's Heart":
     'Passive:\r\nEvery 8th attack activates Everfrost Blast dealing ((STR X 5) + (AGI X 4)) pure splash damage\r\nDamage is affected by ice/water affinity\r\nCounts as a single target\r\nActive:\r\nOn use, activates Frozen Break that launches a projectile that deals (max MP X 4.5) magic damage and breaking any shields in targetted area\r\nIf projectile hits an ally, gives them a (max HP X 30%) shield for 5 seconds\r\nCooldown: 30 seconds, cannot be dropped during cooldown',
   'Meacronacer, the Sword of Thousand Illusions':
@@ -1206,28 +964,12 @@ export default {
     'Passive:\r\n10% Chance to activate Soul Reaping on attack dealing (main stat X 50) magic damage\r\n',
   Hellflame:
     'Passive:\r\n15% Chance to activate Hellflame on attack that burns the target\r\nDeals (AGI X 15) magic damage per second for 10 seconds\r\nIncrease magic damage taken of target by 2% for 5 seconds\r\n',
-  'Eternal Flame':
-    "Passive:\r\n15% Chance to activate Mark of Flame on attack that burns the target\r\nDeals flame affinity X (AGI X 30) bonus magic damage and applies a debuff to target\r\nDebuff deals flame affinity X (AGI X 15) per second and takes 2.5% more magic damage for 15 seconds\r\nAccumulates Heat while in combat every 6 seconds increases user's skill damage and flame affinity by 1% (stacks up to 15 times)\r\n",
   Everfrostbane:
     "Passive:\r\nHit enemies with an icicle on every attack (1.5-2x Agi Damage [Damage is variable])\r\n'Ice Cyclone' 8% chance to activate on attack dealing AoE Damage (40-60x Agi Damage [Damage is variable] 9 second CD)\r\n",
   'Crimson Star':
     'Passive:\r\nEmpowers allies upon healing them with 7.5% Skill Damage and Healing Received.\r\nActive:\r\nOn use, activates Bloody Baptism.\r\nThrows 3 waves of blood to target area, each dealing INT X 20 damage and heals INT X 1.5 HP per second for 2 seconds\r\nCooldown: 12 seconds, cannot be dropped during cooldown',
-  'Atricia, the Sword of Dreams':
-    'Passive:\r\nOn spellcast, empowers next attack to deal (main stat X 9) pure damage, restore (main stat X 0.15), and adds stacks. Can have up to 6 stacks\r\nActive:\r\nConsumes all stacks and deals (50 X Mainstat X stack) damage to nearby enemies, stuns for 2 seconds, and gives 0.5 X stack seconds of 100% damage reduction and CC immunity\r\nCooldown: 90 seconds, cannot be dropped during cooldown',
-  'Splitting of the Sky and Earth':
-    'Passive:\r\nOn skill cast, activates Song of Glory increasing STR by 250 and skill damage by 2.5% for 5 seconds.\r\nStacks up to a max of 4 times. Once max is reached, cannot refresh duration of buff.\r\nActive:\r\nOn use, activates Light of Creation which provides user with max stacks, passive, and damage output is increased by 7.5% for 10 seconds.\r\nCooldown: 90 seconds, cannot be dropped during cooldown',
-  'Staff of Plague':
-    'Active:\r\nOn use, activates Chain of Plague, infecting the target and targets around it for 8 seconds\r\nIf target is an enemy: deals (INT X 5) magic damage per second and lose 10% heal received\r\nIf target is an ally: grants target with 40% magic defense and heals for INT X 1 per second\r\nIf target is self: grants target with 40% magic defense and heals for INT X 0.5 per second\r\nUpon expiration, will explode dealing (INT X 40) magic splash damage\r\nCooldown: 20 seconds, cannot be dropped during cooldown',
-  'Soul of Abyss':
-    'Passive:\r\nOn skill cast, activates Power of Abyss\r\nGrants the user with 12% skill damage (Type-B) and 300 HP regen for allies in 375 radius for 8 seconds\r\nActive:\r\nOn use, activates Call of Abyss\r\nGrants a targetted ally 8% damage output and 15% HP regen for 10 seconds\r\nCooldown: 90 seconds, cannot be dropped during cooldown',
-  'Crimson Hatred':
-    "Passive:\r\nOn skill cast, temporarily increases INT by 250 and flame affinity by 2.5% (stacks up to 5 times) for 5 seconds\r\nActive:\r\nOn use, activates Beam of Hatred that bombards target every 0.125 seconds dealing (INT X 15.625 X fire affinity) magic damage and stuns for 0.5 seconds for a total of 16 projectiles\r\nDamage is increased up to 2 times based on target's missing HP",
-  'Pheles, the Bow of God':
-    "Passive:\r\n'Poem of Wind' Fire 1 additional projectiles on every attack that deals 0.15x ATK DMG as Pure Damage. Poem of Wind can Crit. Can trigger on attack effects\r\n",
   'Death Visage':
     'Active:\r\nIf your Health is below 40%, heals you for 40% max Health and gives you +650 Agi and 0.10x Crit Multiplier for 8 seconds. If your Health is above 40%, gives you +500 Agi for 8 seconds',
-  'Jack Pumpkin Helm +1': '',
-  'Jack Pumpkin Hood +1': '',
   'Grim Visage': 'Active:\r\nGrim Vengeance',
   'Hood of Reaper':
     "Passive:\r\n'Possession' Triggers when Health is low healing you and giving Int for a brief period (20 second CD)\r\n",
@@ -1249,35 +991,25 @@ export default {
   'Horn of Lightning God':
     "Passive:\r\n'Shocking Charge' After moving 3000 range, deal 30x main stat Pure Damage on next attack. (5 second CD)\r\n",
   'Dragon Mask':
-    "Active:\r\n'Dragon Rage' Increase Agility by 600, Critical Multiplier by 0.20x and Health Regeneration by 2,000 for 15 seconds. Effects of Dragon Rage increased by 10% on skill cast, up to 100% (0.40x Critical Multiplier and 4,000 Health Regeneration). (50 second CD)",
+    'Active:\r\nOn use, activates Madness of Dragon for 15 seconds:\r\nInitially increases main stat by 600, crit multiplier by 0.20, and HP regen by 2000\r\nWhile active, every skill cast increases the bonuses above by 10% up to 10 times\r\nCooldown: 50 seconds, cannot be dropped during cooldown',
   'Eye of Wallachia':
-    'Passive:\r\n25% chance on attack to give +0.20x Critical Multiplier, 15% ATK DMG, and 750 Agility 1 second after proc for 6 seconds\r\n',
+    'Passive:\r\n25% chance to activate Eye of Death on attack\r\nIncreases crit multiplier by 0.20, ATK DMG by 15%, and AGI by 750 1 second after proc for 6 seconds\r\nCooldown: 15 seconds, cannot be dropped during cooldown\r\n',
   "Protector's Will":
     'Passive:\r\n25% chance to restore 5% HP and 10% MP on taking damage\r\nCooldown: 3 seconds, cannot be dropped during cooldown\r\nActive:\r\nIncrease nearby allies Magic Resistance by 40% for 12 seconds\r\nCooldown: 90 seconds, cannot be dropped during cooldown',
   'Halo of Judgment':
     'Passive:\r\nDamage dealt by attack +15%\r\nOn attack, activates Judgment, adding 1 stack every 0.15 seconds with a max stack of 5\r\nConsume 1 stack on attack to do (main stat X 1) pure damage on attack\r\nActive:\r\nBlock magic every 1 minute and 30 seconds',
-  'Radiance of the One':
-    'Passive:\r\nDamage dealt by attack +18%\r\nOn attack, activates Judgment, adding 1 stack every 0.15 seconds with a max stack of 5\r\nConsume 1 stack on attack to do (main stat X 1.5) pure damage on attack\r\nActive:\r\nBlock magic every 1 minute',
-  'Eye of the Flame Lord':
-    'Passive:\r\nIncreases nearby allies Skill Damage and ATK DMG by 5%\r\nActive:\r\nSummons 2 Flame Giants\r\nFlame Giant magic defense: 50%',
   'Prophetia, the Greater Source of Mana':
     'Active:\r\nTemporarily increases INT by 1000 and skill damage by 5% on use for 8 seconds',
   'Hood of Apocrypha':
     'Active:\r\nOn use, activates Apocryphos and turns the user invisible for 3 seconds\r\nHeals self for 40% max HP and allies for (INT X 15% max HP)\r\nStuns nearby enemies for 0.5 seconds\r\nCooldown: 30 seconds, cannot be dropped during cooldown',
-  'Hood of Apocalypse':
-    'Active:\r\nOn use, activates Apocalypse dealing (INT X 250) magic damage to nearby enemies\r\nInstantly restores 30% HP of nearby allies and grants them 10% HP regen per 0.25 seconds for 3 seconds\r\nStuns nearby enemies for 1.5 seconds and silences for 3 seconds\r\nCooldown: 45 seconds, cannot be dropped during cooldown',
   'Crown of Serenity':
-    'Passive:\r\nUpon healing an ally, 15% chance to activate Serenity.\r\nGrants 5% skill damage for 5 seconds, regenerates Max HP X 1% of target + INT X 0.125 HP and 20% max mana while duration\r\nActivation chance affected by healing output\r\n',
+    'Passive:\r\nUpon healing an ally, 15% chance to activate Serenity\r\nGrants 5% skill damage and heals (2% max HP of target + INT X 0.125) HP and (1% max MP) every 0.5 seconds for 5 seconds\r\nActivation chance affected by healing output\r\n',
   'Crown of Rage':
-    'Active:\r\nConsume 40% of Current Health to gain 1.25% All Stats and 2.5% main stat of Health consumed and increased Fire Affinity by 5% during for 15 seconds (30 second CD)',
+    'Active:\r\nOn use, activates Refined Power\r\nConsumes 40% of current HP and grants the following for 15 seconds:\r\n(1.25% of consumed HP) all stats\r\n(2 X (1.25% of consumed HP)) main stat\r\n5% flame affinity\r\nCooldown: 30 seconds, cannot be dropped during cooldown',
   'Crown of Composure':
     'Active:\r\nOn use, activates Composure\r\nIncreases skill damage by 7.5% and all stats by 375 for 12 seconds\r\n20% chance to freeze nearby enemies for 12 seconds\r\nCooldown: 100 seconds, cannot be dropped during cooldown',
-  'Crown of Absolute Zero':
-    'Active:\r\nOn use, activates Composure\r\nIncreases skill damage by 12.5% and all stats by 500 for 12 seconds\r\nGrants knockback immunity for 12 seconds\r\nCooldown: 100 seconds, cannot be dropped during cooldown',
   'Infected Crab Armor':
     'Passive:\r\n10% chance to reflect (STR X 5) Pure Damage and 90% chance to return (STR X 0.5) Pure Damage\r\nImproved HP regen\r\n',
-  'Bloody Armor': '',
-  'Bloody Robe': '',
   'Precious Wind-Protection Clothing': 'Passive:\r\nDodge a fatal attack once every 45 seconds\r\n',
   'Bloodstone Plates':
     "Active:\r\n'Bloodstone Form' Increase Health and Mana Regeneration by 7,500, gain 7.5% main stat, and get a shield for 4x main stat for 2 seconds (40 second CD)",
@@ -1299,19 +1031,15 @@ export default {
   'Requiem, the Armor of Lamentation':
     "Passive:\r\nIncreases nearby allies' stats by 5% (Including self)\r\nEvery 8 seconds, activates one of Hatred, Oblivion and Obsession buffs\r\n",
   'Creation of the Sky and Earth':
-    "Active:\r\n'La Pucelle' Anti-Magic Shield on you and all allies (600 AoE) and heal you for 100% Health over 5 seconds. (90 second CD)",
+    'Active:\r\nOn use, activates La Pucelle\r\nGrants all nearby allies with 100% magic defense for 4 seconds\r\nEvery second heals all nearby allies for (25% max HP of target)\r\nCooldown: 90 seconds, cannot be dropped during cooldown',
   'Tunic of the Wraith':
     'Passive:\r\nReduces damage taken by 90% for 3 seconds and heals you for 25% of max Health when Health is low (60 second CD)\r\n',
   'Benedict, the Crimson Armor of Blood':
     'Passive:\r\nIncreases max HP in combat by 1%\r\nUp to AGI X 2 max HP and provides 1.5% HP regen\r\nActive:\r\nOn use, activates Force Break\r\nReleases stored HP and deals (stored HP X 30) pure damage to enemies around user\r\nIncreases AGI by 15% and skill damage by 5% for 12 seconds\r\nStuns for 1.5 seconds\r\nCooldown: 120 seconds, cannot be dropped during cooldown',
   'Grandine, the Plates of Wraith':
     'Passive:\r\nActivates Grandine when HP drops below 20%\r\nGain 90% damage reduction for 3 seconds and instantly heal for 35% max HP\r\nFor the next 3 seconds, heal 6% max HP per second\r\nCooldown: 60 seconds, cannot be dropped during cooldown\r\n',
-  'Athanasia, the Armor of the Reaper':
-    'Passive:\r\nIf HP drops below 20%, summons Reaper\r\nReaper prevents HP from dropping below 1 for 6 seconds\r\nAfter 6 seconds deals (main stat X 100 ~ 200) pure damage based on missing HP of targets around user and restores HP to 100%\r\nCooldown: 60 seconds, cannot be dropped during cooldown\r\n',
   'Hellspike Armor':
     "Passive:\r\n'Hellspike' Reflect 100% of your Max HP as pure damage when hit to all enemies within 200 range (3 second CD)\r\n'Hellspike Eruption' As you take more damage the armor will charge until you've received 125% Max Health total damage. Upon reaching full charge all nearby enemies will receive (3000% your Max HP) in damage and be stunned for 1 seconds. You can accumulate up to 50% charge in a single attack. (5 second CD)\r\nActive:\r\n'Hellspike' Deal 20% of your Max HP to yourself and 100% of Max Health as pure damage to nearby enemies . (3 second CD)",
-  'Felspike Armor':
-    'Passive:\r\nOn absorbing 100% max HP worth of damage, empowers next Hellspike\r\nEmpowered Hellspike deals 5000% max HP around user and stuns for 2 seconds\r\nCan accumulate up to 50% max HP damage from one damage instance\r\nCooldown: 5 seconds before accumulating again\r\nActive:\r\nOn use, activates Hellspike\r\nDeals 2000% max HP to enemies around user and increases ATK DMG by 5000 for 2.5 seconds\r\nCooldown: 7.5 seconds, cannot be dropped during cooldown',
   'Bloodsoul Plates':
     "Active:\r\n'Blood Armor' Absorb up to (10,000 + Max Health x 20%) Damage over next 5 seconds. When damage is absorbed does 100x main stat to enemy, heals 20% Max Health and heals mana equal to absorbed damage. (20 second CD)",
   'Frostshard Armor':
@@ -1323,27 +1051,18 @@ export default {
   'Winter Robe':
     "Active:\r\n'Everfrost Soul' Forms a shield that blocks damage equal to (8 X INT) (45 second CD)",
   'Diana, the Robe of Holy Maiden':
-    "Passive:\r\n'Salvation' Increases nearby allies Skill Damage by 6% and Magic Resistance by 8%\r\nActive:\r\n'Prayer of the Priest' Fires 6 waves of beams that spiral outward from your hero followed by an explosion on the 7th wave, 750 AoE dealing Intelligence x200 total. All nearby allies are healed for 1.5x Int per wave. Character cannot move during active but can still cast other spells and are protected by a shield that blocks 15,000 + 5x Int damage and lasts for duration",
+    'Passive:\r\nIncreases nearby allies skill damage by 6% & magic defense by 8%\r\nActive:\r\nOn use, activates Prayer of Holy Maiden\r\n7 spiral waves shoot outwards from the user while immobilizing the user (can use dash spells)\r\nRestores (INT X 1.5) HP to all nearby allies per wave\r\nDeals (INT X 25) magic damage to all nearby enemies for 6 waves\r\n7th wave deals (INT X 50) magic damage\r\nApplies a shield of (15000 + INT X 5) to all nearby allies for 4.2 seconds\r\nCooldown: 90 seconds, cannot be dropped during cooldown',
   'Medea, the Robe of the Witch':
     "Passive:\r\nOn skill cast gives an orb. Each orb increases INT by 100 and 1% SD. 50% chance to get 2 orbs on skill cast instead of one. (Max 4 orbs)\r\nActive:\r\n'Witch Time' Increase Int by 500 and 6% skill damage. Gain 1 orb every second and passive can trigger more orbs. During buff, each skill cast will consume all current orbs to deal 25x Int damage per orb in an AoE centered on nearest boss (if no boss, nearest enemy), lasts 6 seconds. (90 second CD)",
-  'Hades, the Armor of Despair':
-    "Passive:\r\nIncreases nearby allies stats by 6% in 800 AoE(Including self)\r\n'Despair of the Damned' Every 6 seconds deal 20x All Stats magic damage to all nearby enemies and increase the damage they take by 4% for 6 seconds. Heal for 6% Max Health the next time you attack\r\n",
-  'Robe of Archlich':
-    'Active:\r\nOn use, summons Magic Field granting the user with magic and CC immunity.\r\nAlso provides a 40% magic resistance to allies in a 500 radius around user\r\nRestores 5% HP and MP per second to all affected units\r\nLasts 8 seconds\r\nCooldown: 100 seconds, cannot be dropped during cooldown',
   'Fruit Candy Pouch':
     'Active:\r\nOn use, throws out 5 random candies which rapidly heal the user over 4 seconds\r\nGrape Flavored Candy: Increases INT by (LVL / 2 + 50)\r\nBlueberry Flavored Candy: Increases AGI by (LVL / 2 + 50)\r\nApple Flavored Candy: Increases STR by (LVL / 2 + 50)\r\nDuration: 15 minutes, cooldown: 120 seconds\r\nCooldown of pouch: 180 seconds, cannot be dropped during cooldown',
   'Tentacle Horn':
     'Active:\r\nSpawns tentacles around the caster throwing units into the air, stunning them and healing the caster',
   'Teperua, the Ring of Blood': 'Active:\r\nRestore health in a nearby AoE (60 second CD)',
-  'Mana Heart': '',
-  'Mana Heart Large': '',
-  'Everfrost Gauntlet': '',
   'Ring of Light': "Passive:\r\n'Holy Wings' Increase nearby allies armor by 200\r\n",
-  'Ring of Darkness': '',
   'Ring of the Sage':
     'Active:\r\nResets the last ability cast, and gain increased Mana Regeneration for 18 seconds (Does not apply to ultimate skill or items) (135 second CD)',
   'Mana Heart Frost': 'Passive:\r\nImproved MP regen\r\nFrost effect on attack\r\n',
-  'True Guardian Ring': '',
   'Ring of the Reaper': 'Active:\r\nConverts damage taken into Health for 2 seconds',
   'Purefrost Gauntlet': 'Passive:\r\nApplies Frost effect on attack\r\n',
   'Living Dragon Heart':
@@ -1365,12 +1084,8 @@ export default {
     'Passive:\r\nIncrease nearby allies Magical Resistance by 8% (Aura Range 1,200)\r\nActive:\r\nShields nearby allies for (5x Int + 20% Health) damage for 5 seconds. (60 second CD)',
   'Bell of Light':
     "Passive:\r\nIncreases nearby allies' armor by 300 and HP by 5000\r\nOn skill cast, gathers Holy Light up to 5 times.\r\nStacks last for 8 seconds\r\nActive:\r\nOn use, releases Holy Light\r\nHeals all allies within 600 radius for (stacks X 0.30 X (STR + AGI + INT)) HP\r\nCooldown: 10 seconds",
-  'Ring of Revival':
-    'Passive:\r\nRevive 2 seconds after death with 100% Health/Mana (240 second CD)\r\nActive:\r\nHeal yourself for 50% Max Health/Mana. Lasts 10 seconds. (45 second CD)',
   'Ring of Strike':
     'Passive:\r\n7.5% Chance to activate Absolute Strike on attack\r\nNext 4 hits will deal an additional 100% ATK DMG\r\nAlso gain 20000 ATK DMG, 1000 main stat, and 1000 HP regen for 7.5 seconds\r\nAbsolute Strike cooldown: 15 seconds, cannot be dropped during cooldown\r\n',
-  'Ring of Insanity':
-    'Passive:\r\n12.5% Chance to activate Frenzy on attack\r\nNext 5 hits will deal an additional 100% ATK DMG\r\nAlso gain 25000 ATK DMG, 1250 main stat and HP regen for 7.5 seconds\r\nFrenzy cooldown: 15 seconds, cannot be dropped during cooldown\r\n',
   'Ring of Time':
     "Passive:\r\nIf HP drops below 1, Heals HP x 40%, then deals the damage that procc'd the effect (CD: 300 Seconds)\r\nIf hero dies immediately after passive is procc'd, cooldown does not start.\r\nActive:\r\n'Time Distortion' Resets the last ability cast (Does not apply to ultimate skill or items) and makes you immune to stuns, silence and knockback for 10 seconds, also regenerate 1500 Mana each second while duration (90 seconds CD)",
   'Ispion, the Runed Ring':
@@ -1381,18 +1096,11 @@ export default {
     'Passive:\r\nConverts 0.5% of dealt damage into max HP and MP with a cap of (base STR X 1.5) for HP and (base INT X 1.5) for MP\r\nLasts 6 seconds after the last time you deal damage\r\nActive:\r\nOn use, activates Dark Light, consuming all stored HP and MP\r\nEvery second for 5 seconds, deals ((12 X stored HP) + (20 X stored MP)) magic damage in a 500 radius around user\r\nReduces MOV SPD and ATK DMG by 50% and silences on affected enemies for 1.5 seconds\r\nOn the last second, deals a final damage of ((60 X stored HP) + (100 X stored MP)) magic damage in a 500 radius around user and stuns for 1 second\r\nCooldown: 120 seconds, cannot be dropped during cooldown',
   "Heaven's Fist":
     "Passive:\r\n'Sacred Heart' Empower next attack every 5 seconds dealing 3 additional strikes with 200% Damage, and lowering the enemy's armor by 225 for 3 seconds\r\n",
-  'Latea, the Ring of Overlord':
-    "Passive:\r\n20% chance of 20% additional damage\r\n'Absolute Protection' Chance to activate when hit blocking all damage received from that attack\r\n",
-  'Horn of God':
-    "Passive:\r\nEmpowers nearby allies within 750 AoE radius, increasing their ATK DMG by INT X 0.6 (up to a max of 6000), their ATK SPD by 25%, and HP regen by 400\r\nActive:\r\nOn use, activates Purification on targeted ally, granting them the following effects for 3 seconds:\r\nPrevents HP from dropping below 1\r\nHeals 0.10 X target's max HP and removes any debuffs each second\r\nCooldown: 20 seconds, cannot be dropped during cooldown",
-  'Ring of Fate':
-    'Passive:\r\nIf HP drops below 1, activates Time Reversal, restoring HP to 100%\r\nCooldown: 300 seconds\r\nActive:\r\nOn use, activates Time Distortion, resetting the cooldown of the last non-ultimate spell used\r\nAlso increases MP regen by 2500 and provides immunity to stuns, silences, and knockbacks for 10 seconds\r\nCooldown: 75 seconds, cannot be dropped during cooldown',
   'Wing of Sea':
     "Passive:\r\n'Revelation' Chance to temporarily increase Experience Gain and Mana Regeneration on kill\r\nActive:\r\nTeleport you to Alfon Village (first town)",
   'Dragon Wings': 'Active:\r\nCreates a portal between Capitol Prius and your current location',
   'Cape of the Count':
-    'Passive:\r\nWhen casting a spell, empower next attack with darkness (5,000 + 2x main stat damage and heal for 2.5% max hp)\r\n',
-  'Corrupt Crystal Wings': '',
+    'Passive:\r\nWhen casting a spell, empower next attack with darkness (5000 + 2 X main stat) damage\r\n',
   'Hungry Bat Wings':
     "Passive:\r\n'Drain' Empower next attack after moving 400 range (including by teleport/dash) dealing bonus 60% of your Attack as Pure Damage and healing you for 8% Health (0.125s cd)\r\nGain 150 Health regen on every proc up to 5 times for 2.5 seconds.\r\n",
   'Cape of Corrupt Flame':
@@ -1400,18 +1108,14 @@ export default {
   'Frozen Heart': 'Passive:\r\nSlows nearby enemies\r\n',
   'Fairy Wings': 'Active:\r\nCreates a portal between Capitol Prius and your current location',
   'Wings of Fury':
-    'Passive:\r\nWhen casting a spell, empower next attack with Fury (Does [7,500+2.5x main stat] Pure Damage and heals for 3% of your Max Health on next attack. 1/8 Chance to crit, doing [15,000+6x main stat] Pure Damage and healing for 7.5% of your Max Health on next attack)\r\nIncreases Agility by 60 for 7 seconds when Fury activates\r\n',
+    'Passive:\r\nWhen casting a spell, empower next attack with Fury\r\nDeals ((main stat X 2.5) + AGI) pure damage\r\nEmpowered attacks have a 12.5% chance to crit, dealing ((main stat X 5) + (AGI X 2)) pure damage\r\nEach stack, up to 10, increases AGI by 60 for 7 seconds\r\n',
   "Wanderer's Cape": 'Active:\r\nCreates a portal between Capitol Prius and your current location',
   'Frost Fairy Wings':
     'Active:\r\nOn use, creates a Magical Passage, connecting your current location to Capital Prius',
-  'Wings of Frost Lord':
-    'Active:\r\nOn skill cast, summons Ice Spikes that target closest enemy boss\r\nDeals (INT X 25) magic damage per spike\r\n5 Ice Spikes can be summoned at once',
   'Pure Crystal Wings':
     'Passive:\r\nOn skill cast, 5% chance to reset all cooldowns (except ultimate), effect triggers 2 seconds after the skill that initiates it (150 second CD)\r\n',
   'Wings of Phoenix':
     'Active:\r\nOn use, activates Flame Flight\r\nDeals (ATK DMG X 5 + main stat X 75) magic damage to enemies in targeted area\r\nStuns for 0.5 seconds\r\nMax dash distance of 900\r\nCooldown: 45 seconds, cannot be dropped during cooldown',
-  'Wings of Flame Lord':
-    'Active:\r\nOn use, activates Flame Descent\r\nDeals (ATK DMG X 15 + main stat X 125) magic damage to enemies in targeted area\r\nStuns for 1.5 seconds\r\nMax dash distance of 1500\r\nCooldown: 30 seconds, cannot be dropped during cooldown',
   'Soul Eater':
     'Passive:\r\nPeriodically absorbs nearby souls\r\nAbsorbs 3 souls every 5 seconds that heal you for 2.5% HP and 3% MP each (for a total of 7.5% HP and 9% MP)\r\nActive:\r\nOn use, consumes portion of MP to release souls\r\nReleased souls deal (75 X INT X (0.5 + (0.5 X current MP / max MP)) magic damage to surrounding enemies\r\nAlso heals all nearby allies for 40% max HP X (current MP / max MP))\r\nCooldown: 40 seconds, cannot be dropped during cooldown',
   'Soul of the Dead':
@@ -1420,61 +1124,26 @@ export default {
     'Passive:\r\nDealing single-target skill damage inflicts target with corruption giving -4% MR debuff and dealing bonus damage over time (Does 20% of the abilities damage over 2 seconds, effect stacks)\r\n',
   'Grim Heart':
     "Passive:\r\nReduces MOV and ATK SPD by 20% of nearby enemies\r\nActive:\r\n'Grim Howl' Restores 33% of Max Health and stuns nearby enemies for 1 second while decreasing their ATK DMG for 8 seconds. (-Healing does not stack with others) (40 second CD)",
-  'Brave Heart':
-    'Passive:\r\nReduces MOV and ATK SPD by 25% of nearby enemies\r\nActive:\r\nOn use activates Bravery, restoring 40% max HP of self and 20% max HP of nearby allies\r\nStuns nearby enemies for 1.5 seconds\r\nCooldown: 40 seconds, cannot be dropped during cooldown',
   'Wings of Slayer':
-    "Passive:\r\nWhen casting a spell, empower next attack with Slayer's Fury (Does [10,000+3x main stat] Pure Damage and heals for 4% of your Max Health on next attack. 17.5% Chance to Crit, doing [25,000+7.5x main stat] Pure Damage and healing for 10% of your Max Health on next attack)\r\nIncreases Agility by 70 for 8 seconds when Slayer's Fury activates. When you reach 10 stacks of \"Slayer's Fury\" Skill Damage is increased by 9% (Max 10 Stacks)\r\n",
-  'Ruler of the Skies':
-    'Passive:\r\nOn skill cast, activates Power of Skies\r\nIncreases all stats by 500 and deals (main stat X 1.25) pure damage per attack for 5 seconds\r\nCooldown: 15 seconds\r\nActive:\r\nOn use, activates Star of Destruction\r\nDeals ((STR + AGI) X 250) magic damage to enemies at target location and reduces their armor by 300 for 10 seconds\r\nStuns for 2.5 seconds\r\nCooldown: 120 seconds, cannot be dropped during cooldown',
-  'Wings of Blood Lord':
-    'Passive:\r\nUpon moving 400 distance, activates Bloody Bite on next attack.\r\nOn each proc, deal ATK DMG X 75% pure damage, heal Max HP X 8%, and for 4 seconds gain ATK +1500, MS +15, and HP Recovery Rate +250 (can overlap up to 5 times)\r\n',
-  'Protection of the Fairies':
-    'Passive:\r\nHealing received by nearby allies +15%\r\nActive:\r\nOn use, revives a fallen ally with full HP and MP\r\nCooldown: 300 seconds, cannot be dropped during cooldown',
-  'Archangel Wings':
-    'Passive:\r\n"Archangel\'s Judgement" On spell cast, 5% chance to reset the cooldown of all non-ultimate skills after 2 seconds of delay, gain 10% skill damage, and 50% damage resistance for 10 seconds (120 second CD)\r\n',
-  Storm:
-    'Passive:\r\nOn spell cast, increases skill damage and crit chance by 4% for 6 seconds. Stacks up to 3 times\r\n',
+    "Passive:\r\nOn skill cast, empowers next attack with Decimation:\r\nDeals ((main stat X 2.5) + (AGI X 1.5)) pure damage\r\nUser's critical chance to deal (normal damage X user's crit multipler) pure damage\r\nActivates Madness of Slayer for 6 seconds when procced\r\nCreates a stack every proc up to 10 times\r\nEach stack increases AGI by 90\r\nWhen 10 stacks reached, increases skill damage by 10%\r\n",
   'Rusty Pickaxe':
     'Active:\r\nSwings axe to mine ores.\r\nFor 5 minutes, mines 1 ores per 1 second\r\nAvailable ores: Iron Ore, Silver Ore, Gold Ore',
   'Sturdy Pickaxe':
     'Active:\r\nSwings axe to mine ores.\r\nFor 5 minutes, mines 2 ores per 1 second\r\nAvailable ores: Iron Ore, Silver Ore, Gold Ore',
   'Rusty Magical Pickaxe':
-    'Active:\r\nSwings axe to mine ores.\r\nFor 5 minutes, mines 1 ores per 1 second\r\nAvailable ores: Minor Magical Stone, Lesser Magical Stone, Medium Magical Stone, Greater Magical Stone',
+    'Active:\r\nSwings axe to mine ores.\r\nFor 5 minutes, mines 1 ores per 1 second\r\nAvailable ores: Worthless Magical Stone, Lesser Magical Stone, Medium Magical Stone, Greater Magical Stone',
   'Sturdy Magic Pickaxe':
-    'Active:\r\nSwings axe to mine magical stones.\r\nFor 5 minutes, mines 2 ores per 1 second\r\nAvailable ores: Minor Magical Stone, Lesser Magical Stone, Medium Magical Stone, Greater Magical Stone',
+    'Active:\r\nSwings axe to mine magical stones.\r\nFor 5 minutes, mines 2 ores per 1 second\r\nAvailable ores: Worthless Magical Stone, Lesser Magical Stone, Medium Magical Stone, Greater Magical Stone',
   'Mithril Pickaxe':
     'Active:\r\nQuickly Swings axe to mine ores.\r\nFor 1 second, mines 10 ores per 0.1 seconds\r\nAvailable ores: Iron Ore, Silver Ore, Gold Ore',
   'Abyssal Pickaxe':
-    'Active:\r\nQuickly Swings axe to mine magical stones.\r\nFor 1 second, mines 10 ores per 0.1 seconds\r\nAvailable ores: Minor Magical Stone, Lesser Magical Stone, Medium Magical Stone, Greater Magical Stone',
-  'Hydra Icon': '',
-  'Count Icon': '',
-  'Jack Icon': '',
-  'Mage Lord Icon': '',
-  'Wings of Death Icon': '',
-  'Guardian Angel Icon': '',
-  'Corrupt Angel Icon': '',
-  'Everfrost Icon': '',
-  'Spider Queen Icon': '',
-  'Demon Lord Icon': '',
-  'Corruptor Icon': '',
-  'Turtle Lord Icon': '',
-  'Nightmare Icon': '',
-  'Master Icon': '',
-  'Skeleton King Icon': '',
-  'Zombie Lord Icon': '',
-  'Ancient Ent Icon': '',
-  'Archangel Icon': '',
-  'Shadow Dragon Icon': '',
-  'Grandmaster Icon': '',
-  'Wing Frame': '',
+    'Active:\r\nQuickly Swings axe to mine magical stones.\r\nFor 1 second, mines 10 ores per 0.1 seconds\r\nAvailable ores: Worthless Magical Stone, Lesser Magical Stone, Medium Magical Stone, Greater Magical Stone',
+  'Chaotic Pickaxe':
+    'Active:\r\nQuickly Swings axe to mine chaos stones.\r\nFor 1 second, mines 10 ores per 0.1 seconds (1 ore for Chaos Magic Stones)\r\nAvailable ores: Worthless Magical Stone, Lesser Magical Stone, Medium Magical Stone, Greater Magical Stone, Chaos Magic Stone',
   'Ring of Fervor':
     "Passive:\r\nCasting single-target spells on ally applies Fervor\r\nIncreases target's damage by 5% for 12 seconds\r\nActive:\r\nOn use, activates Joy\r\nRestores 40% HP of allies affected by Fervor\r\nCooldown: 30 seconds, cannot be dropped during cooldown",
-  'Ring of Hope':
-    "Passive:\r\nCasting single-target spells on ally applies Passion\r\nIncreases target's damage by 7.5% and main stat by 400 for 12 seconds\r\nActive:\r\nOn use, activates Hope\r\nCleanses debuffs from allies and restores 50% max HP of allies affected by Passion\r\nCooldown: 30 seconds, cannot be dropped during cooldown",
   'Ring of Composure':
     'Passive:\r\nCasting single-target spells on enemies decreases their magic resistance by 6% (Type-B) for 12 seconds\r\nActive:\r\nDeals water affinity X (1% Max HP) pure damage to debuffed enemy and freezes them for 2 seconds\r\nCooldown: 30 seconds, cannot be dropped during cooldown',
-  'Ring of Despair':
-    "Passive:\r\nCasting single-target spells on enemies decreases their magic resistance by 7.5% (Type-B) for 12 seconds\r\nActive:\r\nDeals water affinity X (1.25% Max HP) pure damage to debuffed enemy, freezes for 2 seconds, and increases allies' damage dealt to it by 5% for 2 seconds\r\nCooldown: 30 seconds, cannot be dropped during cooldown",
   'Plates of Lightning':
     'Passive:\r\nAfter casting a spell, emits lightning waves around you for 3 seconds, dealing 20 X (STR + AGI) damage to nearby enemies and restoring 2.5% Max HP per second (6s CD)\r\n',
   'Maw of Greed':
@@ -1487,11 +1156,132 @@ export default {
     'Passive:\r\nOn skill cast, activates Wind Fury for 1.5 seconds\r\nIncreases MOV SPD past 500 limit\r\nNext 2 attacks hit once to deal bonus 50% ATK DMG\r\n',
   'Vest of Storm':
     'Passive:\r\nOn skill cast, activates Wind Fury for 1.5 seconds\r\nIncreases MOV SPD past 500 limit\r\nNext 3 attacks hit once to deal bonus 50% ATK DMG\r\n',
+  'Ring of Revival':
+    'Passive:\r\nOn death, revives after 2 seconds with full HP and MP\r\nCooldown: 240 seconds, cannot be dropped during cooldown\r\nActive:\r\nOn use, activates Revival\r\nRestores 50% of HP and MP/RP\r\nCooldown: 45 seconds, cannot be dropped during cooldown',
+  'Ring of Insanity':
+    'Passive:\r\n12.5% Chance to activate Frenzy on attack\r\nNext 5 hits will deal an additional 100% ATK DMG\r\nAlso gain 25000 ATK DMG, 1250 main stat and HP regen for 7.5 seconds\r\nFrenzy cooldown: 15 seconds, cannot be dropped during cooldown\r\n',
+  'Latea, the Ring of Overlord':
+    "Passive:\r\n20% chance of 20% additional damage\r\n'Absolute Protection' Chance to activate when hit blocking all damage received from that attack\r\n",
+  'Horn of God':
+    "Passive:\r\nEmpowers nearby allies within 750 AoE radius, increasing their ATK DMG by INT X 0.6 (up to a max of 6000), their ATK SPD by 25%, and HP regen by 400\r\nActive:\r\nOn use, activates Purification on targeted ally, granting them the following effects for 3 seconds:\r\nPrevents HP from dropping below 1\r\nHeals 0.10 X target's max HP and removes any debuffs each second\r\nCooldown: 20 seconds, cannot be dropped during cooldown",
+  'Ring of Fate':
+    'Passive:\r\nIf HP drops below 1, activates Time Reversal, restoring HP to 100%\r\nCooldown: 300 seconds\r\nActive:\r\nOn use, activates Time Distortion, resetting the cooldown of the last non-ultimate spell used\r\nAlso increases MP regen by 2500 and provides immunity to stuns, silences, and knockbacks for 10 seconds\r\nCooldown: 75 seconds, cannot be dropped during cooldown',
+  'Ring of Hope':
+    "Passive:\r\nCasting single-target spells on ally applies Passion\r\nIncreases target's damage by 7.5% and main stat by 400 for 12 seconds\r\nActive:\r\nOn use, activates Hope\r\nCleanses debuffs from allies and restores 50% max HP of allies affected by Passion\r\nCooldown: 30 seconds, cannot be dropped during cooldown",
+  'Ring of Despair':
+    "Passive:\r\nCasting single-target spells on enemies decreases their magic resistance by 7.5% (Type-B) for 12 seconds\r\nActive:\r\nDeals water affinity X (1.25% Max HP) pure damage to debuffed enemy, freezes for 2 seconds, and increases allies' damage dealt to it by 5% for 2 seconds\r\nCooldown: 30 seconds, cannot be dropped during cooldown",
   'Nebula Rose':
     'Passive:\r\nIncrease nearby allies Magical Resistance by 10%\r\nAura range: 1200\r\nActive:\r\nActivates Cosmic Protection, which provides ((INT X 5) + (Max HP X 0.2)) shield to nearby allies for 5 seconds\r\nTargets taking spell damage during shield will gain 4% damage output and 12% damage resistance for 30 seconds\r\nCooldown: 45 seconds, cannot be dropped during cooldown',
+  'Ring of Divine Winds':
+    'Passive:\r\nOn attack, 15% chance to activate Double Attack\r\nOn spellcast, 15% chance to refresh cooldown of that spell\r\nActive:\r\nOn use, teleports user to target location\r\nMax distance: 1200\r\nCooldown: 25 seconds, cannot be dropped during cooldown',
+  'Demonic Fist':
+    "Passive:\r\nEvery 5 seconds, empowers next attack with Demonic Grasp:\r\nNext attack hits 5 extra times with 150% ATK DMG each\r\nReduces target's armor by 300 for 3 seconds (Type-A)\r\nHeals user for 7.5% max HP\r\nOnly works on melee attacks\r\nActive:\r\nOn use, empowers next attack with Demonic Grasp\r\nCooldown: 10 seconds, cannot be dropped during cooldown",
+  'Eye of the Flame Lord':
+    'Passive:\r\nIncreases nearby allies Skill Damage and ATK DMG by 5%\r\nActive:\r\nSummons 2 Flame Giants\r\nFlame Giant magic defense: 50%',
+  'Hood of Apocalypse':
+    'Active:\r\nOn use, activates Apocalypse dealing (INT X 250) magic damage to nearby enemies\r\nInstantly restores 30% HP of nearby allies and grants them 10% HP regen per 0.25 seconds for 3 seconds\r\nStuns nearby enemies for 1.5 seconds and silences for 3 seconds\r\nCooldown: 45 seconds, cannot be dropped during cooldown',
+  'Prophetia, the Origin of Knowledge':
+    'Passive:\r\nOn spell cast, 7.5% chance to activate Enlightment\r\nRefreshes cooldown of a random spell\r\nActive:\r\nOn use, activates Magical Concentration\r\nIncreases INT by 1000 and skill damage by 7.5% for 8 seconds\r\nIncreases INT by 100 and skill damage by 0.5% every second\r\nCooldown: 60 seconds, cannot be dropped during cooldown',
+  'Mask of Demigod':
+    'Active:\r\nOn use, activates Demigod Infusion\r\nIncreases AGI by 800, critical damage by 0.25 and HP regen by 2000 for 15 seconds\r\nCasting a spell empowers these buffs by 10% (up to 100%)\r\nUsing the [M] hotkey lets you teleport up to 800 distance up to 3 times\r\nCooldown: 40 seconds, cannot be dropped during cooldown',
+  'Eye of the Reaper':
+    'Passive:\r\nOn attack, activates Eye of the Reaper\r\nIncreases ATK DMG by 17.5%, critical damage by 0.25 and AGI by 1000 for 7.5 seconds\r\nCooldown: 15 seconds, cannot be dropped during cooldown\r\n',
+  'Radiance of the One':
+    'Passive:\r\nDamage dealt by attack +18%\r\nOn attack, activates Judgment, adding 1 stack every 0.15 seconds with a max stack of 5\r\nConsume 1 stack on attack to do (main stat X 1.5) pure damage on attack\r\nActive:\r\nBlock magic every 1 minute',
+  'Spirit of Protector':
+    'Passive:\r\nProvides the user and nearby allies with 1% HP regen and 15% damage resistance for 15 seconds\r\nActive:\r\nOn use, activates Spirit of Protector\r\nFor 12 seconds provides 40% damage resistance to nearby allies\r\nCooldown: 120 seconds, cannot be dropped during cooldown',
+  'Horn of Demon God':
+    "Passive:\r\nWhen moving 3000 distance, your next attack is empowered by Demonic Ray\r\nDeals (main stat X 50) pure damage in a line in front of user\r\nIncreases user's damage dealt to target by 10% for 2.5 seconds\r\nCooldown: 5 seconds, cannot be dropped during cooldown\r\n",
+  'Crown of Extreme Anger':
+    'Active:\r\nOn use, activates Extreme Anger\r\nConsumes 50% of current HP\r\nDeals (flame affinity X (main stat X 250)) magic damage to nearby enemies\r\nFor 15 seconds, increases all stats by 1.25% consumed HP (double for main stat) and flame affinity by 7.5%\r\nCooldown: 30 seconds, cannot be dropped during cooldown',
+  'Crown of Absolute Zero':
+    'Active:\r\nOn use, activates Composure\r\nIncreases skill damage by 12.5% and all stats by 500 for 12 seconds\r\nGrants knockback immunity for 12 seconds\r\nCooldown: 100 seconds, cannot be dropped during cooldown',
+  'Robe of Archlich':
+    'Active:\r\nOn use, summons Magic Field granting the user with magic and CC immunity.\r\nAlso provides a 40% magic resistance to allies in a 500 radius around user\r\nRestores 5% HP and MP per second to all affected units\r\nLasts 8 seconds\r\nCooldown: 100 seconds, cannot be dropped during cooldown',
+  'Thanatos, the Robe of Hell':
+    'Active:\r\nOn use, activates Extinction\r\nProvides 1250 INT for 7 seconds\r\nUpon expiration, send a meteor to every nearby enemy dealing (INT X (20 + number of spells casted (max 20)) X 20) magic damage\r\nCooldown: 90 seconds, cannot be dropped during cooldown',
+  'Jupiter, the Robe of Heavens':
+    'Passive:\r\nIncreases nearby allies skill damage by 8% & magic defense by 10%\r\nActive:\r\nOn use, activates Salvation\r\nHeals nearby allies to full\r\nAfterwards emits a divine light that restores (INT X 2.5) HP to ally with lowest HP every 0.25 seconds\r\nAlso deals (INT X 50) magic damage and stuns all nearby enemies for 1 second every second\r\nCooldown: 90 seconds, cannot be dropped during cooldown',
+  'Hades, the Armor of Despair':
+    "Passive:\r\nIncreases nearby allies stats by 6% in 800 AoE(Including self)\r\n'Despair of the Damned' Every 6 seconds deal 20x All Stats magic damage to all nearby enemies and increase the damage they take by 4% for 6 seconds. Heal for 6% Max Health the next time you attack\r\n",
+  'Felspike Armor':
+    'Passive:\r\nOn absorbing 100% max HP worth of damage, empowers next Hellspike\r\nEmpowered Hellspike deals 5000% max HP around user and stuns for 2 seconds\r\nCan accumulate up to 50% max HP damage from one damage instance\r\nCooldown: 5 seconds before accumulating again\r\nActive:\r\nOn use, activates Hellspike\r\nDeals 2000% max HP to enemies around user and increases ATK DMG by 5000 for 2.5 seconds\r\nCooldown: 7.5 seconds, cannot be dropped during cooldown',
+  'Athanasia, the Armor of the Reaper':
+    'Passive:\r\nIf HP drops below 20%, summons Reaper\r\nReaper prevents HP from dropping below 1 for 6 seconds\r\nAfter 6 seconds deals (main stat X 100 ~ 200) pure damage based on missing HP of targets around user and restores HP to 100%\r\nCooldown: 60 seconds, cannot be dropped during cooldown\r\n',
+  'Nevedium, the Armor of Demonblood':
+    'Passive:\r\nOn dealing damage, accumulates Blood\r\nConverts 1% of damage dealt into max HP (AGI X 2 max)\r\nWhen fully stacked provides 2% HP regen\r\nActive:\r\nOn use, activates Demon Break\r\nReleases stored HP to deal (stored HP X 50) pure damage to nearby enemies and stuns for 1.5 seconds\r\nIncreases AGI by 20% and damage output by 5% for 12 seconds\r\nCooldown: 90 seconds, cannot be dropped during cooldown',
+  'Harmony of Sky and Earth':
+    'Passive:\r\nNearby allies gain passive 1% HP regen\r\nActive:\r\nOn use, activates Cosmos\r\nProvides 100% magic defense and debuff immunity to allies within 800 radius for 5 seconds\r\nApplies magic defense first then cleanses\r\nHeals 25% hp per second to user\r\nCooldown: 90 seconds, cannot be dropped during cooldown',
+  'Bloodseeker Plates':
+    'Passive:\r\nWhen HP drops below 20%, activates Bloodthirst\r\nProvides 7.5% damage output and 3% HP regen for 8 seconds\r\nCooldown: 15 seconds\r\nActive:\r\nOn use, activates Bloody Soul\r\nProvides (15000 + 25% max HP) shield for 5 seconds\r\nUpon expiration, restores HP and MP equal to absorbed damage\r\nAlso deals (main stat X 150) magic damage to nearby enemies\r\nCooldown: 20 seconds, cannot be dropped during cooldown',
+  "Heaven's Door":
+    "Passive:\r\nEmpowers next attack with Heaven's Light every 4 seconds\r\nDeals (INT X 50) magic damage to target and heals (INT X 1.5) HP to allies near target\r\nActive:\r\nOn use, activates Heaven's Door\r\nRefreshes a random non-ultimate spell of 2 closest nearby allies\r\nAllies cannot be affected by this more than once every 60 seconds\r\nCooldown: 30 seconds, cannot be dropped during cooldown",
+  'Chaos Fang':
+    'Passive:\r\nEmpowers next attack with Breath of Chaos every 4 seconds\r\nActive:\r\nOn use, summons Chaos Spawn\r\nCooldown: 60 seconds, cannot be dropped during cooldown',
+  'Ethenos, the Staff of Chaos':
+    'Active:\r\nOn use, activates Big Bang\r\nDeals (INT X 750) magic damage to nearby enemies\r\nStuns for 3 seconds\r\nCooldown: 60 seconds, cannot be dropped during cooldown',
+  Armageddon:
+    'Passive:\r\nOn spellcast, activates Catastrophe\r\nIncreases ATK DMG by 12500 and INT by 750 for 4 seconds\r\nCooldown: 12 seconds\r\nActive:\r\nOn use, activates Chant of Ruin\r\nDeals (2500% ATK DMG + INT X 125) magic damage to nearby enemies\r\nIncreases magic damage taken of hit enemies by 9% for 10 seconds\r\nStuns for 2 seconds\r\nUser is invulnerable while channeling\r\nCooldown: 60 seconds, cannot be dropped during cooldown',
+  'Staff of Plague':
+    'Active:\r\nOn use, activates Chain of Plague, infecting the target and targets around it for 8 seconds\r\nIf target is an enemy: deals (INT X 5) magic damage per second and lose 10% heal received\r\nIf target is an ally: grants target with 40% magic defense and heals for INT X 1 per second\r\nIf target is self: grants target with 40% magic defense and heals for INT X 0.5 per second\r\nUpon expiration, will explode dealing (INT X 40) magic splash damage\r\nCooldown: 20 seconds, cannot be dropped during cooldown',
+  'Soul of Abyss':
+    'Passive:\r\nOn skill cast, activates Power of Abyss\r\nGrants the user with 12% skill damage (Type-B) and 300 HP regen for allies in 375 radius for 8 seconds\r\nActive:\r\nOn use, activates Call of Abyss\r\nGrants a targetted ally 8% damage output and 15% HP regen for 10 seconds\r\nCooldown: 90 seconds, cannot be dropped during cooldown',
+  'Crimson Hatred':
+    "Passive:\r\nOn skill cast, temporarily increases INT by 250 and flame affinity by 2.5% (stacks up to 5 times) for 5 seconds\r\nActive:\r\nOn use, activates Beam of Hatred that bombards target every 0.125 seconds dealing (INT X 15.625 X fire affinity) magic damage and stuns for 0.5 seconds for a total of 16 projectiles\r\nDamage is increased up to 2 times based on target's missing HP",
+  'Power of Beriel':
+    'Passive:\r\n(1 + 0.125 X attacks without activation)% Chance to activate Doomsday on attack\r\nDeals (ATK DMG X 12.5 + (STR + AGI) X 75) magic damage\r\nStuns for 0.1 seconds\r\nActive:\r\nOn use, activates Grasp of Demon Lord\r\nPulls in all enemies from 300 ~ 800 radius around you, deals (ATK DMG X 50) magic damage and stuns for 2 seconds\r\nCooldown: 60 seconds, cannot be dropped during cooldown',
+  'Espishu, the Sword of Chaos':
+    'Passive:\r\n10% Chance to activate Chaos Strike on attack dealing ((STR + AGI) X 45) magic damage\r\n',
+  'Eternal Winter':
+    "Passive:\r\nEvery 8th attack activates Frost Explosion dealing water affinity X ((STR X 6) + (AGI X 5)) pure splash damage\r\nCounts as a single target\r\nActive:\r\nOn use, activates Permafrost\r\nDeals (max MP X 6) pure damage to nearby enemies and destroys their shields\r\nFreezes the ground and procs the following every second for 3 seconds\r\nDeals (max MP X 2) pure damage to enemies and freezes them for 1 second\r\nProvides (target's max MP X 0.3) shield to allies for 5 seconds\r\nCooldown: 30 seconds, cannot be dropped during cooldown",
+  'Atricia, the Sword of Dreams':
+    'Passive:\r\nOn spellcast, empowers next attack to deal (main stat X 9) pure damage, restore (main stat X 0.15), and adds stacks. Can have up to 6 stacks\r\nActive:\r\nConsumes all stacks and deals (50 X Mainstat X stack) damage to nearby enemies, stuns for 2 seconds, and gives 0.5 X stack seconds of 100% damage reduction and CC immunity\r\nCooldown: 90 seconds, cannot be dropped during cooldown',
+  Calamity:
+    "Passive:\r\nOn skill cast, gains a stack and activate Ruin\r\nIncreases ATK DMG by 1500, STR and INT by 75 and skill damage by 1% for 5 seconds\r\nStacks up to 10 times\r\nActive:\r\nOn use, activates Sword of Calamity\r\nDeals (main stat X 250 + 10% max HP of target) magic damage to enemies in targetted area and silences for 3 seconds\r\nDeals up to 100% more damage based on target's missing HP\r\nSets Ruin stacks to max for 15 seconds\r\nCooldown: 60 seconds, cannot be dropped during cooldown",
+  'Splitting of the Sky and Earth':
+    'Passive:\r\nOn skill cast, activates Song of Glory increasing STR by 250 and skill damage by 2.5% for 5 seconds.\r\nStacks up to a max of 4 times. Once max is reached, cannot refresh duration of buff.\r\nActive:\r\nOn use, activates Light of Creation which provides user with max stacks, passive, and damage output is increased by 7.5% for 10 seconds.\r\nCooldown: 90 seconds, cannot be dropped during cooldown',
+  Chaos:
+    "Passive:\r\n25% Chance to activate Devastation on attack causing enemies within a frontal cone area to take (STR X 100) magic damage\r\nReduces armor by 250 and magic defense by 2.5% for 6 seconds\r\nCooldown: 5 seconds\r\nActive:\r\nOn use, activates Oblivion granting the user with 100% ATK SPD, 200 STR, and 1.5% skill damage per 1 ~ 0.5 seconds while draining user's HP\r\nStacks up to 10 times and drains (3000 + seconds elapsed X 750) HP per second\r\nCooldown: 60 seconds, cannot be dropped during cooldown",
+  'Cosmic Reaper':
+    'Passive:\r\nOn every 12th attack, activates Dimension Cut. Deals (main stat X 50) magic damage to target and enemies around it\r\nOn skill cast, activates Awakening. Increases AGI by 1000 and regenerates 7.5% max Hp per second for 7.5 seconds\r\nIf user is NOT Martial Artist: On-attack activates every 4th attack for duration\r\nSpellcast Cooldown: 15 seconds, cannot be dropped during cooldown\r\n',
+  Soulbane:
+    'Passive:\r\n10% Chance to activate Soul Reaping on attack to deal (AGI X 60) bonus damage\r\nActive:\r\nOn use, activates Soul Bombardment\r\nShoots 4 arrows to target area, each dealing (AGI X 125) magic damage and stunning targets for 2.5 second\r\nCooldown: 120 seconds, cannot be dropped during cooldown',
+  'Eternal Flame':
+    "Passive:\r\n15% Chance to activate Mark of Flame on attack that burns the target\r\nDeals flame affinity X (AGI X 30) bonus magic damage and applies a debuff to target\r\nDebuff deals flame affinity X (AGI X 15) per second and takes 2.5% more magic damage for 15 seconds\r\nAccumulates Heat while in combat every 6 seconds increases user's skill damage and flame affinity by 1% (stacks up to 15 times)\r\n",
+  'Pheles, the Bow of God':
+    "Passive:\r\n'Poem of Wind' Fire 1 additional projectiles on every attack that deals 0.15x ATK DMG as Pure Damage. Poem of Wind can Crit. Can trigger on attack effects\r\n",
+  'Last Word':
+    'Passive:\r\nCharges a Bullet of Penance every 4 seconds\r\nEmpowers next attack to deal (ATK DMG X 8 + AGI X 50) bonus magic damage and stun target for 0.25 seconds\r\nUp to 3 bullets can be loaded\r\n',
+  'Chrono Chaser':
+    "Active:\r\nOn use activates Chrono Chaser, a projectile that breaks shields and deals (AGI X 250 + 7.5% target's max HP) magic damage\r\nStuns for 1 second\r\nProjectile stays in target area for 4 seconds and deals 20% of initial damage per second\r\nCooldown: 45 seconds, cannot be dropped during cooldown",
+  Rainmaker:
+    'Passive:\r\nOn healing, activates Healing Water granting healed allies ((INT X 0.4) X water affinity) HP regen for 3 seconds\r\nActive:\r\nOn use, activates Rainstorm around the user\r\nRestores INT X 1 max HP to all nearby allies every 2 seconds for 6 seconds\r\nCooldown: 15 seconds',
   'Cosmic Star':
     'Passive:\r\nEmpowers healed allies with 9% Skill Damage and healing for 6 seconds.\r\nActive:\r\nThrows 3 waves of light to target area (400 radius) each dealing INT X 40 damage and heals INT X 1.5 HP to allies (10 second CD)',
+  'Wings of Frost Lord':
+    'Active:\r\nOn skill cast, summons Ice Spikes that target closest enemy boss\r\nDeals (INT X 25) magic damage per spike\r\n5 Ice Spikes can be summoned at once',
+  'Wings of Flame Lord':
+    'Active:\r\nOn use, activates Flame Descent\r\nDeals (ATK DMG X 15 + main stat X 125) magic damage to enemies in targeted area\r\nStuns for 1.5 seconds\r\nMax dash distance of 1500\r\nCooldown: 30 seconds, cannot be dropped during cooldown',
+  'Brave Heart':
+    'Passive:\r\nReduces MOV and ATK SPD by 25% of nearby enemies\r\nActive:\r\nOn use activates Bravery, restoring 40% max HP of self and 20% max HP of nearby allies\r\nStuns nearby enemies for 1.5 seconds\r\nCooldown: 40 seconds, cannot be dropped during cooldown',
+  'Ruler of the Skies':
+    'Passive:\r\nOn skill cast, activates Power of Skies\r\nIncreases all stats by 500 and deals (main stat X 1.25) pure damage per attack for 5 seconds\r\nCooldown: 15 seconds\r\nActive:\r\nOn use, activates Star of Destruction\r\nDeals ((STR + AGI) X 250) magic damage to enemies at target location and reduces their armor by 300 for 10 seconds\r\nStuns for 2.5 seconds\r\nCooldown: 120 seconds, cannot be dropped during cooldown',
+  'Wings of Blood Lord':
+    'Passive:\r\nUpon moving 400 distance, activates Bloody Bite on next attack.\r\nOn each proc, deal ATK DMG X 75% pure damage, heal Max HP X 8%, and for 4 seconds gain ATK +1500, MS +15, and HP Recovery Rate +250 (can overlap up to 5 times)\r\n',
+  'Protection of the Fairies':
+    'Passive:\r\nHealing received by nearby allies +15%\r\nActive:\r\nOn use, revives a fallen ally with full HP and MP\r\nCooldown: 300 seconds, cannot be dropped during cooldown',
+  'Archangel Wings':
+    'Passive:\r\n"Archangel\'s Judgement" On spell cast, 5% chance to reset the cooldown of all non-ultimate skills after 2 seconds of delay, gain 10% skill damage, and 50% damage resistance for 10 seconds (120 second CD)\r\n',
+  Storm:
+    'Passive:\r\nOn spell cast, increases skill damage and crit chance by 4% for 6 seconds. Stacks up to 3 times\r\n',
+  'Wings of Night Lord':
+    "Passive:\r\nOn skill cast, empowers next attack\r\nNext attack deals (main stat X 3 + AGI X 2.5) pure damage\r\nCan crit based on user's critical chance\r\nEmpowered attack stacks Madness of Night\r\nFor 6 seconds increases AGI by 120 (stacks up to 10 times)\r\nOnce max stacks is reached, user can no longer gain more for duration but gains 10% damage output\r\n",
+  'Cloak of Deep Abyss':
+    "Passive:\r\nDealing damage to enemies with single-target effects applies Abyssal Erosion\r\nDeals 25% of effect's damage over 3 seconds\r\nIncreases target's magic damage taken by 5 ~ 10% (increases based on amount of time target is debuffed, max at 30 seconds)\r\nIf target dies while debuffed it explodes and deals (main stat X 50) pure damage to nearby enemies\r\n",
+  'Wings of Immortal':
+    'Passive:\r\nWhile in combat, every 3 seconds increases main stat by 30 for a max of 1500\r\nOn death, revives user\r\nCooldown: 180 seconds, cannot be dropped during cooldown\r\n',
+  'Soul Devourer':
+    'Passive:\r\nEvery 5 seconds restores 10% max HP and max MP to user\r\nActive:\r\nOn use, activates Soul Swallow\r\nCleanses debuffs from user\r\nRestores 40% max HP\r\nCooldown: 40 seconds, cannot be dropped during cooldown',
   'Ring of Healed':
     "Passive:\r\nIf HP drops below 1, Gives you a text that says HEALED but thats it.\r\nActive:\r\nOn use, activates Time Distortion resetting it's own cooldown, but only once.\r\nCannot be dropped",
-  'Essence of Air': '',
 };
